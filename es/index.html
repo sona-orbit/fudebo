@@ -35,9 +35,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/fudebo/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/fudebo/assets/icon-180.png">
 <link rel="preload" as="image" href="/fudebo/assets/kv/hero-940.webp" imagesrcset="/fudebo/assets/kv/hero-560.webp 560w, /fudebo/assets/kv/hero-940.webp 940w" imagesizes="(min-width: 900px) 460px, 92vw" fetchpriority="high">
-<link rel="stylesheet" href="/fudebo/assets/style.css?v=0626dd7e">
+<link rel="stylesheet" href="/fudebo/assets/style.css?v=75194f43">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||a.getAttribute("aria-label")||"").trim().slice(0,60)});}},true);</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo: Kana de memoria", "alternateName": ["Fudebo"], "description": "Fudebo es una app para iPhone con la que practicas la escritura a mano de hiragana y katakana. Aprendes cada kana, lo escribes de memoria y compruebas el orden y la forma de los trazos.", "inLanguage": "es", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/es/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
+<script id="fudebo-i18n" type="application/json">{"data": "/fudebo/assets/try-kana.json", "voice": {"おはよう": "/fudebo/assets/voice/ohayou.m4a", "こんにちは": "/fudebo/assets/voice/konnichiwa.m4a", "あ": "/fudebo/assets/voice/a.m4a", "い": "/fudebo/assets/voice/i.m4a", "う": "/fudebo/assets/voice/u.m4a", "え": "/fudebo/assets/voice/e.m4a", "お": "/fudebo/assets/voice/o.m4a", "か": "/fudebo/assets/voice/ka.m4a", "き": "/fudebo/assets/voice/ki.m4a", "く": "/fudebo/assets/voice/ku.m4a", "け": "/fudebo/assets/voice/ke.m4a", "こ": "/fudebo/assets/voice/ko.m4a"}, "romaji": {"あ": "a", "い": "i", "う": "u", "え": "e", "お": "o", "か": "ka", "き": "ki", "く": "ku", "け": "ke", "こ": "ko"}, "greet": {"hi": {"morning": "おはよう", "day": "こんにちは", "night": "こんばんは"}, "lines": {"morning": "Buenos días. ¿Escribes una página antes de salir?", "day": "Buenas tardes. Escribe unos cuantos kana durante el descanso.", "night": "Escribe una página antes de dormir. Después de descansar, lo recordarás mejor."}, "more": ["Soy Fudebo. Empecemos por「あ」. Mira cómo lo escribo.", "No necesitas memorizar una tabla. Escribe y lo recordarás.", "No pasa nada si te equivocas. Te mostraré cómo se escribe.", "Hoy basta con una página. Unos diez minutos."]}, "msg": {"fewer": "Falta un trazo: este carácter tiene %d trazos", "more": "Sobra un trazo: este carácter tiene %d trazos", "direction": "El trazo %d va en dirección contraria", "shape": "El trazo %d tiene forma o posición incorrecta", "order": "Orden incorrecto: antes del trazo %d va otro", "lookalike": "Has escrito «%@» en lugar de «%@»", "ok": "Correcto"}}</script>
+<script defer src="/fudebo/assets/matcher.js?v=631f26ab"></script>
+<script defer src="/fudebo/assets/site.js?v=631f26ab"></script>
 </head>
 <body>
 <a class="skip" href="#main">Ir al contenido</a>
@@ -50,6 +53,10 @@
 <main id="main">
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-text">
+<div class="greeter" data-greeter>
+<button type="button" class="greeter-bot" aria-label="Saluda a Fudebo"><img class="stk greeter-img" src="/fudebo/assets/stk/wave.webp" alt="" width="105" height="112" loading="lazy" decoding="async"></button>
+<p class="bubble"><strong class="bubble-hi" lang="ja">こんにちは</strong><span class="bubble-line">Soy Fudebo. Empecemos por「あ」. Mira cómo lo escribo.</span></p>
+</div>
 <p class="eyebrow"><strong class="store-name">Fudebo: Kana de memoria</strong><span class="eyebrow-sep" aria-hidden="true"> · </span><span>App para practicar la escritura de kana en iPhone</span></p>
 <h1><span class="ln">Mira la lectura.</span><span class="ln">Escribe el kana con el dedo.</span></h1>
 <p class="lead">Fudebo solo sirve para practicar la escritura a mano. Cada carácter nuevo empieza con una lección breve y terminas escribiéndolo de memoria. Después, ves su sonido o su romaji, lo escribes de memoria y la app comprueba cada trazo.</p>
@@ -61,11 +68,28 @@
 
 <section class="band band-alt" id="why" aria-labelledby="h-why"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><h2 id="h-why">Por qué Fudebo te pide escribir de memoria</h2></div></div>
-<ol class="why"><li class="why-pt card">Recordar es más eficaz que releer: una semana después, los estudiantes que practicaron recordando retuvieron el 61 % y los que releyeron, el 40 % (Roediger &amp; Karpicke, 2006). Fudebo solo te da la pronunciación; tú escribes el kana.</li><li class="why-pt card">Escribir a mano ayuda a aprender letras nuevas más rápido: los adultos que aprendieron letras árabes a mano necesitaron menos sesiones de aprendizaje y leyeron mejor las palabras, aunque no habían practicado esa tarea (Wiley &amp; Rapp, 2021). En Fudebo solo se escribe a mano.</li><li class="why-pt card">La práctica espaciada perdura más que estudiar todo de una vez: en un metaanálisis, la práctica espaciada obtuvo una media del 47 % de respuestas correctas y la concentrada, del 37 % (Cepeda et al., 2006). Los kana que fallas vuelven al día siguiente y el intervalo aumenta cuando aciertas.</li><li class="why-pt card">Los kana parecidos se practican juntos para que aprendas a distinguirlos (Kornell &amp; Bjork, 2008), y un kana solo se da por aprendido tras 3 aciertos seguidos (Rawson &amp; Dunlosky, 2011).</li></ol>
+<ol class="why"><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/1-recall.webp" alt="" width="640" height="320" loading="lazy" decoding="async"><p>Recordar es más eficaz que releer: una semana después, los estudiantes que practicaron recordando retuvieron el 61 % y los que releyeron, el 40 % (Roediger &amp; Karpicke, 2006). Fudebo solo te da la pronunciación; tú escribes el kana.</p><figure class="chart"><figcaption>Kana recordados una semana después <span class="chart-src">(Roediger &amp; Karpicke, 2006)</span></figcaption><div class="bar"><span class="bar-k">Recordados</span><span class="bar-t"><span class="bar-f" style="width:61%"></span></span><span class="bar-n">61%</span></div><div class="bar bar-b"><span class="bar-k">Releídos</span><span class="bar-t"><span class="bar-f" style="width:40%"></span></span><span class="bar-n">40%</span></div></figure></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/2-handwrite.webp" alt="" width="640" height="240" loading="lazy" decoding="async"><p>Escribir a mano ayuda a aprender letras nuevas más rápido: los adultos que aprendieron letras árabes a mano necesitaron menos sesiones de aprendizaje y leyeron mejor las palabras, aunque no habían practicado esa tarea (Wiley &amp; Rapp, 2021). En Fudebo solo se escribe a mano.</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/4-spacing.webp" alt="" width="640" height="213" loading="lazy" decoding="async"><p>La práctica espaciada perdura más que estudiar todo de una vez: en un metaanálisis, la práctica espaciada obtuvo una media del 47 % de respuestas correctas y la concentrada, del 37 % (Cepeda et al., 2006). Los kana que fallas vuelven al día siguiente y el intervalo aumenta cuando aciertas.</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/5-interleave.webp" alt="" width="640" height="357" loading="lazy" decoding="async"><p>Los kana parecidos se practican juntos para que aprendas a distinguirlos (Kornell &amp; Bjork, 2008), y un kana solo se da por aprendido tras 3 aciertos seguidos (Rawson &amp; Dunlosky, 2011).</p></li></ol>
 <div class="refs"><p class="refs-title">Referencias</p><ol><li>Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li><li>Wiley, R. W., &amp; Rapp, B. (2021). The effects of handwriting experience on literacy learning. Psychological Science, 32(7), 1086–1103. <a href="https://doi.org/10.1177/0956797621993111">doi.org/10.1177/0956797621993111</a></li><li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354">doi.org/10.1037/0033-2909.132.3.354</a></li><li>Kornell, N., &amp; Bjork, R. A. (2008). Learning concepts and categories: Is spacing the &quot;enemy of induction&quot;? Psychological Science, 19(6), 585–592. <a href="https://doi.org/10.1111/j.1467-9280.2008.02127.x">doi.org/10.1111/j.1467-9280.2008.02127.x</a></li><li>Rawson, K. A., &amp; Dunlosky, J. (2011). Optimizing schedules of retrieval practice for durable and efficient learning: How much is enough? Journal of Experimental Psychology: General, 140(3), 283–302. <a href="https://doi.org/10.1037/a0023956">doi.org/10.1037/a0023956</a></li></ol></div>
 </div></section>
 
-<section class="band" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
+<section class="band" id="try" aria-labelledby="h-try"><div class="wrap split split-top">
+<div class="split-text">
+<p class="kicker">Pruébalo</p>
+<h2 id="h-try">Escribe un kana de memoria</h2>
+<p>Escucha cómo suena, mira el romaji y escribe el kana en la cuadrícula con el dedo o el ratón. Esta página comprueba los trazos igual que la app. Cuando aciertes 5, habrás terminado.</p>
+<p class="try-credit">Datos de caracteres y trazos: KanjiVG, CC BY-SA 3.0</p>
+</div>
+<div class="try card" data-try hidden>
+<div class="try-dots" aria-hidden="true"></div>
+<p class="try-q"><span class="try-label">Escribe este kana</span><span class="try-romaji" lang="ja-Latn">a</span><button type="button" class="try-say" data-act="say" aria-label="Escuchar otra vez"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></p>
+<div class="try-pad-wrap"><canvas class="try-pad" aria-label="Escribe este kana"></canvas></div>
+<p class="try-msg" role="status" aria-live="polite"></p>
+<div class="try-btns"><button type="button" data-act="order">Ver orden de trazos</button><button type="button" data-act="clear">Borrar</button></div>
+<div class="try-end" hidden><p class="try-done">En la app, haces una página al día y escribes de memoria hasta que te los sabes.</p><div class="cta"><p class="soon"><span class="soon-dot" aria-hidden="true"></span>Próximamente en el App Store</p></div><button type="button" class="try-again" data-act="again">Otra ronda</button></div>
+</div>
+</div></section>
+
+<section class="band band-alt" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/oops.webp" alt="" width="100" height="112" loading="lazy" decoding="async"><div><p class="kicker">Cuando un trazo está mal</p><h2 id="h-check">El trazo incorrecto se marca en rojo</h2></div></div>
 <p>Después de cada carácter, Fudebo comprueba 4 cosas: el número de trazos, su orden, la dirección de cada uno y su forma y posición.</p><p>Si un trazo no está bien, se vuelve rojo y se muestra el orden correcto. Repasas el carácter una vez y vuelves a escribirlo por tu cuenta. Si has escrito otro carácter parecido, la app te dice cuál.</p><p>Si no recuerdas cómo seguir, «Pista de un trazo» dibuja solo el siguiente trazo.</p>
@@ -77,7 +101,7 @@
 </figure>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-teach"><div class="wrap">
+<section class="band" aria-labelledby="h-teach"><div class="wrap">
 <div class="split">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><p class="kicker">Lecciones</p><h2 id="h-teach">Aprende cada carácter nuevo antes de escribirlo</h2></div></div>
@@ -90,7 +114,7 @@
 <p class="steps-note">Cuando hayas aprendido una fila entera, sus caracteres aparecen mezclados para que vuelvas a escribirlos de memoria.</p>
 </div></section>
 
-<section class="band" aria-labelledby="h-set"><div class="wrap split split-top">
+<section class="band band-alt" aria-labelledby="h-set"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/stamp.webp" alt="" width="161" height="112" loading="lazy" decoding="async"><div><p class="kicker">Ajustes de práctica</p><h2 id="h-set">Decide cómo quieres practicar</h2></div></div>
 <p>Cambia estos ajustes en Configuración. Se aplicarán a todas las páginas siguientes.</p>
@@ -98,29 +122,29 @@
 <dl class="info card"><div><dt>Enunciados</dt><dd>Escribe a partir del romaji o del sonido; mira un hiragana y escribe el katakana, o al revés; o escribe palabras a partir de su significado. Puedes elegir varias opciones y se mezclarán. El cambio entre hiragana y katakana y las palabras requieren Pro.</dd></div><div><dt>Ayudas</dt><dd>Una guía tenue siempre, repasar primero y luego escribir sin guía, o escribir de memoria desde el principio.</dd></div><div><dt>Escrituras de memoria</dt><dd>De 1 a 3 por cada carácter nuevo.</dd></div><div><dt>Corrección</dt><dd>Permisiva, normal o estricta. También puedes decidir si un orden de trazos incorrecto cuenta como error.</dd></div><div><dt>Cuadrícula</dt><dd>Cuadrícula en cruz, cuadrícula diagonal o sin líneas. Puedes mostrar los números de los trazos mientras repasas.</dd></div><div><dt>Cantidad diaria</dt><dd>La página de hoy se mide en escrituras: de 10 a 200 (en intervalos de 10), con 40 escrituras o unos 10 minutos por defecto. Toca la cantidad en la tarjeta «Página de hoy» de la pantalla de inicio y arrastra para cambiarla. Por defecto, los caracteres nuevos llegan en filas completas; también puedes elegir 3 al día.</dd></div></dl>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-review"><div class="wrap">
+<section class="band" aria-labelledby="h-review"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/sleep.webp" alt="" width="159" height="112" loading="lazy" decoding="async"><div><p class="kicker">Repaso</p><h2 id="h-review">Los caracteres que fallas vuelven al día siguiente</h2></div></div>
 <div class="cols"><p>Un carácter que escribes mal pasa a la página de mañana. Si lo escribes bien, vuelve cada vez después de un intervalo más largo.</p><p>La siguiente fila se abre cuando recuerdas casi toda la anterior (como mucho, queda un carácter sin afianzar). Si aciertas los repasos, puede abrirse ese mismo día.</p><p>No hay contador de días consecutivos. Puedes dejar pasar unos días y continuar cuando vuelvas. No pierdes nada.</p></div>
 </div></section>
 
-<section class="band" id="practice" aria-labelledby="h-play"><div class="wrap">
+<section class="band band-alt" id="practice" aria-labelledby="h-play"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/write.webp" alt="" width="119" height="112" loading="lazy" decoding="async"><div><p class="kicker">Zona de práctica</p><h2 id="h-play">Para escribir más, entra en la Zona de práctica</h2></div></div>
 <p class="play-intro">La Zona de práctica tiene su propia entrada en la pantalla de inicio, separada de la Página de hoy. Puedes escribir tanto tiempo como quieras.</p>
 <div class="pls"><article class="pl card pl-main"><h3>Escritura ilimitada</h3><p>Primero elige qué quieres practicar: los caracteres aprendidos, los que fallas a menudo, una fila o una selección propia. Los caracteres van apareciendo por turnos. Uno se considera dominado y deja de aparecer cuando lo escribes bien 3 veces seguidas sin ayudas. Un error pone su cuenta a cero; vuelve dos o tres caracteres después y la siguiente vez empieza con una guía tenue. Los puntos de la parte superior muestran el progreso de cada carácter. Puedes parar cuando quieras; tu progreso se incorpora al plan de repaso.</p></article><article class="pl card"><h3>Practicar errores frecuentes</h3><p>Selecciona los 8 caracteres que más has fallado últimamente e inicia la Escritura ilimitada con ellos.</p></article><article class="pl card"><h3>Duelo de caracteres parecidos <span class="pro-tag">Pro</span></h3><p>Parejas de caracteres parecidos, como さ/ち, ぬ/め, シ/ツ y ソ/ン, en orden aleatorio. Acierta 6 seguidos para completar el ejercicio.</p></article><article class="pl card"><h3>Dictado <span class="pro-tag">Pro</span></h3><p>Solo oyes el sonido, sin romaji. También puedes incluir palabras.</p></article><article class="pl card"><h3>Hiragana ↔ katakana <span class="pro-tag">Pro</span></h3><p>Mira el hiragana y escribe el katakana, o al revés.</p></article><article class="pl card"><h3>Reto de 60 segundos <span class="pro-tag">Pro</span></h3><p>Escucha y escribe: ¿cuántos puedes acertar en 60 segundos? Se guarda tu mejor resultado.</p></article></div>
 <p class="steps-note">Duelo de caracteres parecidos, Dictado, Hiragana ↔ katakana y Reto de 60 segundos requieren Pro. Con los hiragana que has aprendido, la versión gratuita incluye la Escritura ilimitada y «Practicar errores frecuentes».</p>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-copy"><div class="wrap">
+<section class="band" aria-labelledby="h-copy"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/read.webp" alt="" width="104" height="112" loading="lazy" decoding="async"><div><p class="kicker">Cuaderno y escritura</p><h2 id="h-copy">Consulta lo que has escrito en tu cuaderno</h2></div></div>
 <div class="cbs"><article class="cb card"><h3>Escribir 12 veces (cuaderno)</h3><p>Toca cualquier carácter de la tabla de kana y elige «Escribir 12 veces (cuaderno)». Hay 4 casillas para repasar, 2 con una guía tenue y 6 vacías. Se comprueba cada una.</p></article><article class="cb card"><h3>Mi cuaderno</h3><p>Las hojas de práctica de cada día se guardan por fecha para que puedas volver a consultarlas.</p></article><article class="cb card"><h3>Progreso por carácter</h3><p>Muestra, uno al lado del otro, tu primer intento, uno intermedio y el más reciente de un carácter. Toca uno para ver cómo lo escribiste. Puedes guardar las hojas de práctica y el progreso de un carácter como imágenes para compartirlas.</p></article></div>
 </div></section>
 
-<section class="band" aria-labelledby="h-info"><div class="wrap two">
+<section class="band band-alt" aria-labelledby="h-info"><div class="wrap two">
 <div><h2 id="h-info">Detalles</h2><dl class="info card"><div><dt>Contenido</dt><dd>Los 46 hiragana básicos. Pro añade katakana, dakuon, handakuon, yōon y 66 palabras básicas.</dd></div><div><dt>Cada día</dt><dd>La Página de hoy tiene 40 escrituras (unos 10 minutos) por defecto; puedes ajustar la cantidad de 10 a 200. Para escribir más, entra en la Zona de práctica.</dd></div><div><dt>Cómo escribes</dt><dd>Con el dedo sobre la pantalla.</dd></div><div><dt>Lecturas</dt><dd>Voces japonesas grabadas e incluidas en la app. Las pocas palabras sin grabación usan la voz japonesa integrada del iPhone.</dd></div><div><dt>Cuenta</dt><dd>No hace falta. Si tienes iCloud activado, tu escritura y tu progreso se sincronizan con tu propio iCloud para que puedas continuar en un teléfono nuevo.</dd></div><div><dt>Dispositivos</dt><dd>iPhone con iOS 17 o posterior. También funciona en iPad.</dd></div></dl></div>
 <div><h2 id="h-not">Lo que no hace</h2><ul class="limits"><li>Solo sirve para practicar la escritura de kana. No enseña gramática, kanji ni conversación.</li><li>Comprueba el número, el orden, la dirección y la forma de los trazos. No puntúa lo bonita que sea tu letra.</li><li>Las 66 palabras básicas sirven para practicar los kana que has aprendido. No es un curso de vocabulario.</li></ul></div>
 </div></section>
 
-<section class="band band-alt" id="plans" aria-labelledby="h-plans"><div class="wrap">
+<section class="band" id="plans" aria-labelledby="h-plans"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/cheer.webp" alt="" width="118" height="112" loading="lazy" decoding="async"><div><h2 id="h-plans">Gratis y Pro</h2></div></div>
 <div class="plans">
 <article class="plan card" aria-labelledby="h-free"><h3 id="h-free">Gratis</h3><ul><li>Lecciones y práctica de los 46 hiragana básicos</li><li>Una página al día, con la cantidad que tú elijas</li><li>Zona de práctica: Escritura ilimitada y «Practicar errores frecuentes» con los hiragana que has aprendido</li><li>Ejercicios de copia para los hiragana que has aprendido</li><li>Tu cuaderno y el progreso de cada carácter</li><li>Anuncios: un banner en la parte inferior de la pantalla de inicio y, como máximo, uno al día después de terminar una página</li></ul></article>

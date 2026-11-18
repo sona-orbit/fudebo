@@ -35,9 +35,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/fudebo/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/fudebo/assets/icon-180.png">
 <link rel="preload" as="image" href="/fudebo/assets/kv/hero-940.webp" imagesrcset="/fudebo/assets/kv/hero-560.webp 560w, /fudebo/assets/kv/hero-940.webp 940w" imagesizes="(min-width: 900px) 460px, 92vw" fetchpriority="high">
-<link rel="stylesheet" href="/fudebo/assets/style.css?v=0626dd7e">
+<link rel="stylesheet" href="/fudebo/assets/style.css?v=75194f43">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||a.getAttribute("aria-label")||"").trim().slice(0,60)});}},true);</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo: Write Kana from Memory", "alternateName": ["Fudebo"], "description": "Fudebo is an iPhone app for Japanese handwriting practice. Each new kana starts with a lesson card, then you trace it, follow a faint guide and write it from memory. The app checks stroke count, order, direction and shape. You set the daily amount, mistakes come back the next day, and unlimited writing in Practice lets you keep going until you know each kana.", "inLanguage": "en", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
+<script id="fudebo-i18n" type="application/json">{"data": "/fudebo/assets/try-kana.json", "voice": {"おはよう": "/fudebo/assets/voice/ohayou.m4a", "こんにちは": "/fudebo/assets/voice/konnichiwa.m4a", "あ": "/fudebo/assets/voice/a.m4a", "い": "/fudebo/assets/voice/i.m4a", "う": "/fudebo/assets/voice/u.m4a", "え": "/fudebo/assets/voice/e.m4a", "お": "/fudebo/assets/voice/o.m4a", "か": "/fudebo/assets/voice/ka.m4a", "き": "/fudebo/assets/voice/ki.m4a", "く": "/fudebo/assets/voice/ku.m4a", "け": "/fudebo/assets/voice/ke.m4a", "こ": "/fudebo/assets/voice/ko.m4a"}, "romaji": {"あ": "a", "い": "i", "う": "u", "え": "e", "お": "o", "か": "ka", "き": "ki", "く": "ku", "け": "ke", "こ": "ko"}, "greet": {"hi": {"morning": "おはよう", "day": "こんにちは", "night": "こんばんは"}, "lines": {"morning": "Good morning. Write a page before you head out?", "day": "Good afternoon. Write a few kana on your break.", "night": "Write a page before bed. Sleep will help it stick."}, "more": ["I’m Fudebo. Let’s start with「あ」. Watch me write it first.", "No need to memorize a chart. Write along and you’ll remember.", "It’s okay to make a mistake. I’ll show you how.", "Just one page today. About ten minutes."]}, "msg": {"fewer": "Missing stroke: this character has %d strokes", "more": "Extra stroke: this character has %d strokes", "direction": "Stroke %d goes the wrong way", "shape": "Stroke %d has the wrong shape or position", "order": "Wrong stroke order: another stroke comes before stroke %d", "lookalike": "You wrote “%@” instead of “%@”", "ok": "Correct"}}</script>
+<script defer src="/fudebo/assets/matcher.js?v=631f26ab"></script>
+<script defer src="/fudebo/assets/site.js?v=631f26ab"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -50,6 +53,10 @@
 <main id="main">
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-text">
+<div class="greeter" data-greeter>
+<button type="button" class="greeter-bot" aria-label="Say hello to Fudebo"><img class="stk greeter-img" src="/fudebo/assets/stk/wave.webp" alt="" width="105" height="112" loading="lazy" decoding="async"></button>
+<p class="bubble"><strong class="bubble-hi" lang="ja">こんにちは</strong><span class="bubble-line">I’m Fudebo. Let’s start with「あ」. Watch me write it first.</span></p>
+</div>
 <p class="eyebrow"><strong class="store-name">Fudebo: Write Kana from Memory</strong><span class="eyebrow-sep" aria-hidden="true"> · </span><span>iPhone app for kana handwriting</span></p>
 <h1><span class="ln">See the reading.</span><span class="ln">Write the kana with your finger.</span></h1>
 <p class="lead">Fudebo is only for handwriting. Each new character starts with a short lesson and works up to writing it from memory. After that you get the sound or the romaji, you write from memory, and the app checks it stroke by stroke.</p>
@@ -61,11 +68,28 @@
 
 <section class="band band-alt" id="why" aria-labelledby="h-why"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><h2 id="h-why">Why Fudebo has you write from memory</h2></div></div>
-<ol class="why"><li class="why-pt card">Recalling beats rereading: a week later, students who practiced recalling remembered 61%, those who reread 40% (Roediger &amp; Karpicke, 2006). Fudebo gives only the sound; you write the kana yourself.</li><li class="why-pt card">Handwriting helps you learn new letters faster: adults learning Arabic letters by hand needed the fewest training sessions and read words better, even without practicing that (Wiley &amp; Rapp, 2021). Fudebo is handwriting only.</li><li class="why-pt card">Spaced practice lasts longer than cramming: in a meta-analysis, spaced practice averaged 47% correct and massed practice 37% (Cepeda et al., 2006). Missed kana come back the next day, and the gap grows when you get them right.</li><li class="why-pt card">Look-alike kana are practiced side by side so you learn to tell them apart (Kornell &amp; Bjork, 2008), and a kana counts as learned only after 3 correct in a row (Rawson &amp; Dunlosky, 2011).</li></ol>
+<ol class="why"><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/1-recall.webp" alt="" width="640" height="320" loading="lazy" decoding="async"><p>Recalling beats rereading: a week later, students who practiced recalling remembered 61%, those who reread 40% (Roediger &amp; Karpicke, 2006). Fudebo gives only the sound; you write the kana yourself.</p><figure class="chart"><figcaption>Remembered a week later <span class="chart-src">(Roediger &amp; Karpicke, 2006)</span></figcaption><div class="bar"><span class="bar-k">Recalled</span><span class="bar-t"><span class="bar-f" style="width:61%"></span></span><span class="bar-n">61%</span></div><div class="bar bar-b"><span class="bar-k">Reread</span><span class="bar-t"><span class="bar-f" style="width:40%"></span></span><span class="bar-n">40%</span></div></figure></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/2-handwrite.webp" alt="" width="640" height="240" loading="lazy" decoding="async"><p>Handwriting helps you learn new letters faster: adults learning Arabic letters by hand needed the fewest training sessions and read words better, even without practicing that (Wiley &amp; Rapp, 2021). Fudebo is handwriting only.</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/4-spacing.webp" alt="" width="640" height="213" loading="lazy" decoding="async"><p>Spaced practice lasts longer than cramming: in a meta-analysis, spaced practice averaged 47% correct and massed practice 37% (Cepeda et al., 2006). Missed kana come back the next day, and the gap grows when you get them right.</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/5-interleave.webp" alt="" width="640" height="357" loading="lazy" decoding="async"><p>Look-alike kana are practiced side by side so you learn to tell them apart (Kornell &amp; Bjork, 2008), and a kana counts as learned only after 3 correct in a row (Rawson &amp; Dunlosky, 2011).</p></li></ol>
 <div class="refs"><p class="refs-title">References</p><ol><li>Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li><li>Wiley, R. W., &amp; Rapp, B. (2021). The effects of handwriting experience on literacy learning. Psychological Science, 32(7), 1086–1103. <a href="https://doi.org/10.1177/0956797621993111">doi.org/10.1177/0956797621993111</a></li><li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354">doi.org/10.1037/0033-2909.132.3.354</a></li><li>Kornell, N., &amp; Bjork, R. A. (2008). Learning concepts and categories: Is spacing the &quot;enemy of induction&quot;? Psychological Science, 19(6), 585–592. <a href="https://doi.org/10.1111/j.1467-9280.2008.02127.x">doi.org/10.1111/j.1467-9280.2008.02127.x</a></li><li>Rawson, K. A., &amp; Dunlosky, J. (2011). Optimizing schedules of retrieval practice for durable and efficient learning: How much is enough? Journal of Experimental Psychology: General, 140(3), 283–302. <a href="https://doi.org/10.1037/a0023956">doi.org/10.1037/a0023956</a></li></ol></div>
 </div></section>
 
-<section class="band" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
+<section class="band" id="try" aria-labelledby="h-try"><div class="wrap split split-top">
+<div class="split-text">
+<p class="kicker">Try it</p>
+<h2 id="h-try">Write one from memory</h2>
+<p>Listen to the sound, look at the romaji and write the kana in the grid, with your finger or a mouse. This page uses the same stroke check as the app. Get five right and you are done.</p>
+<p class="try-credit">Character and stroke data: KanjiVG, CC BY-SA 3.0</p>
+</div>
+<div class="try card" data-try hidden>
+<div class="try-dots" aria-hidden="true"></div>
+<p class="try-q"><span class="try-label">Write this kana</span><span class="try-romaji" lang="ja-Latn">a</span><button type="button" class="try-say" data-act="say" aria-label="Listen again"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></p>
+<div class="try-pad-wrap"><canvas class="try-pad" aria-label="Write this kana"></canvas></div>
+<p class="try-msg" role="status" aria-live="polite"></p>
+<div class="try-btns"><button type="button" data-act="order">See stroke order</button><button type="button" data-act="clear">Clear</button></div>
+<div class="try-end" hidden><p class="try-done">In the app: one page a day, writing from memory until you know them.</p><div class="cta"><p class="soon"><span class="soon-dot" aria-hidden="true"></span>Coming to the App Store</p></div><button type="button" class="try-again" data-act="again">Another round</button></div>
+</div>
+</div></section>
+
+<section class="band band-alt" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/oops.webp" alt="" width="100" height="112" loading="lazy" decoding="async"><div><p class="kicker">When a stroke is wrong</p><h2 id="h-check">The wrong stroke is marked in red</h2></div></div>
 <p>After each character, Fudebo looks at four things: the number of strokes, their order, the direction of each stroke, and its shape and position.</p><p>If a stroke is off, that stroke turns red and the correct stroke order plays. You trace the character once, then write it again on your own. If you wrote a similar-looking character instead, the app tells you which one.</p><p>Stuck? “Hint one stroke” draws only the next stroke.</p>
@@ -77,7 +101,7 @@
 </figure>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-teach"><div class="wrap">
+<section class="band" aria-labelledby="h-teach"><div class="wrap">
 <div class="split">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><p class="kicker">Lessons</p><h2 id="h-teach">New characters are taught before you write them</h2></div></div>
@@ -90,7 +114,7 @@
 <p class="steps-note">When a whole row is learned, its characters are shuffled and written from memory once more.</p>
 </div></section>
 
-<section class="band" aria-labelledby="h-set"><div class="wrap split split-top">
+<section class="band band-alt" aria-labelledby="h-set"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/stamp.webp" alt="" width="161" height="112" loading="lazy" decoding="async"><div><p class="kicker">Practice settings</p><h2 id="h-set">You decide how to practise</h2></div></div>
 <p>Change these in Settings; every page after that follows them.</p>
@@ -98,29 +122,29 @@
 <dl class="info card"><div><dt>Prompts</dt><dd>Write from romaji, write from the sound, see hiragana and write katakana (or the other way around), write words from their meaning. Pick several and they are mixed. The hiragana–katakana swap and words are Pro.</dd></div><div><dt>Hints</dt><dd>A faint guide every time, trace first and then remove it, or write from memory right away.</dd></div><div><dt>Memory writes</dt><dd>1 to 3 per new character.</dd></div><div><dt>Grading</dt><dd>Lenient, standard or strict, and whether a wrong stroke order counts as a mistake.</dd></div><div><dt>Grid</dt><dd>Cross grid, diagonal grid or no grid lines. Stroke numbers can be shown while tracing.</dd></div><div><dt>Daily amount</dt><dd>Today&#x27;s page is counted in writes: 10 to 200 (in steps of 10), 40 writes or about 10 minutes by default. Tap the amount on the Today&#x27;s Page card on the home screen and drag to change it. New characters come a whole row at a time by default, or 3 a day.</dd></div></dl>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-review"><div class="wrap">
+<section class="band" aria-labelledby="h-review"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/sleep.webp" alt="" width="159" height="112" loading="lazy" decoding="async"><div><p class="kicker">Review</p><h2 id="h-review">Characters you miss come back the next day</h2></div></div>
 <div class="cols"><p>A character you got wrong goes into tomorrow&#x27;s page. One you got right comes back after a longer gap each time.</p><p>A new row opens when you remember nearly all of the row before (at most one not yet steady). Getting your reviews right can open it the same day.</p><p>There is no streak counter. Skip a few days, come back and carry on. Nothing is taken away.</p></div>
 </div></section>
 
-<section class="band" id="practice" aria-labelledby="h-play"><div class="wrap">
+<section class="band band-alt" id="practice" aria-labelledby="h-play"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/write.webp" alt="" width="119" height="112" loading="lazy" decoding="async"><div><p class="kicker">Practice</p><h2 id="h-play">Want to write more? Go to Practice</h2></div></div>
 <p class="play-intro">Practice has its own entry on the home screen, separate from Today&#x27;s Page. Write for as long as you like.</p>
 <div class="pls"><article class="pl card pl-main"><h3>Unlimited writing</h3><p>First pick a scope: learned, frequently missed, one row, or your own choice. The characters keep coming round; a character counts as mastered and drops out once you write it correctly 3 times in a row without hints. A mistake resets it to zero, it comes back two or three characters later, and the next time starts with a faint guide. A row of small dots at the top shows each character&#x27;s progress. Stop whenever you like; your progress goes into the review schedule.</p></article><article class="pl card"><h3>Practice frequent mistakes</h3><p>Picks the 8 characters you have missed most recently and starts Unlimited writing with them.</p></article><article class="pl card"><h3>Look-alike showdown <span class="pro-tag">Pro</span></h3><p>Look-alike pairs such as さ/ち, ぬ/め, シ/ツ and ソ/ン, mixed in random order. Get 6 in a row right to clear it.</p></article><article class="pl card"><h3>Dictation <span class="pro-tag">Pro</span></h3><p>Only the sound, no romaji. Words can be added.</p></article><article class="pl card"><h3>Hiragana ↔ Katakana <span class="pro-tag">Pro</span></h3><p>See hiragana and write katakana, or the other way around.</p></article><article class="pl card"><h3>60-second challenge <span class="pro-tag">Pro</span></h3><p>Listen and write: how many can you get right in 60 seconds? Your best score is kept.</p></article></div>
 <p class="steps-note">Look-alike showdown, Dictation, Hiragana ↔ Katakana and 60-second challenge are Pro. With the hiragana you have learned, the free version has Unlimited writing and Practice frequent mistakes.</p>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-copy"><div class="wrap">
+<section class="band" aria-labelledby="h-copy"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/read.webp" alt="" width="104" height="112" loading="lazy" decoding="async"><div><p class="kicker">Copybook and handwriting</p><h2 id="h-copy">Everything you write is kept in your own copybook</h2></div></div>
 <div class="cbs"><article class="cb card"><h3>Write 12 times (copybook)</h3><p>Tap any character in the kana chart and choose “Write 12 times (copybook)”. 4 boxes to trace, 2 with a faint guide and 6 empty, each one checked.</p></article><article class="cb card"><h3>My Copybook</h3><p>Each day&#x27;s practice sheet is filed by date, so you can page back through it.</p></article><article class="cb card"><h3>Character progress</h3><p>Your first, a middle and your latest version of a character side by side. Tap one to replay how you wrote it. Practice sheets and a character&#x27;s progress can be saved as images to share.</p></article></div>
 </div></section>
 
-<section class="band" aria-labelledby="h-info"><div class="wrap two">
+<section class="band band-alt" aria-labelledby="h-info"><div class="wrap two">
 <div><h2 id="h-info">Details</h2><dl class="info card"><div><dt>Content</dt><dd>The 46 basic hiragana. Pro adds katakana, dakuon, handakuon, yōon and 66 basic words.</dd></div><div><dt>Each day</dt><dd>Today&#x27;s Page is 40 writes (about 10 minutes) by default; you can set 10 to 200. For more, go to Practice.</dd></div><div><dt>How you write</dt><dd>With your finger on the screen.</dd></div><div><dt>Readings</dt><dd>Recorded Japanese voice, included in the app. The few words without a recording use the iPhone&#x27;s built-in Japanese voice.</dd></div><div><dt>Account</dt><dd>Not needed. With iCloud on, your handwriting and progress sync to your own iCloud, so you can continue on a new phone.</dd></div><div><dt>Devices</dt><dd>iPhone with iOS 17 or later. It also runs on iPad.</dd></div></dl></div>
 <div><h2 id="h-not">What it does not do</h2><ul class="limits"><li>It only practises writing kana. No grammar, kanji or conversation.</li><li>It checks stroke count, order, direction and shape. It does not grade how nice your handwriting looks.</li><li>The 66 basic words are there to practise the kana you have learned. It is not a vocabulary course.</li></ul></div>
 </div></section>
 
-<section class="band band-alt" id="plans" aria-labelledby="h-plans"><div class="wrap">
+<section class="band" id="plans" aria-labelledby="h-plans"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/cheer.webp" alt="" width="118" height="112" loading="lazy" decoding="async"><div><h2 id="h-plans">Free and Pro</h2></div></div>
 <div class="plans">
 <article class="plan card" aria-labelledby="h-free"><h3 id="h-free">Free</h3><ul><li>Lessons and practice for the 46 basic hiragana</li><li>One page a day, in the amount you set</li><li>Practice: Unlimited writing and Practice frequent mistakes with the hiragana you have learned</li><li>Copybook for the hiragana you have learned</li><li>My Copybook and progress for each character</li><li>Ads: a banner at the bottom of the home screen, and at most once a day after a finished page</li></ul></article>

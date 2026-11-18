@@ -35,9 +35,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/fudebo/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/fudebo/assets/icon-180.png">
 <link rel="preload" as="image" href="/fudebo/assets/kv/hero-940.webp" imagesrcset="/fudebo/assets/kv/hero-560.webp 560w, /fudebo/assets/kv/hero-940.webp 940w" imagesizes="(min-width: 900px) 460px, 92vw" fetchpriority="high">
-<link rel="stylesheet" href="/fudebo/assets/style.css?v=0626dd7e">
+<link rel="stylesheet" href="/fudebo/assets/style.css?v=75194f43">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||a.getAttribute("aria-label")||"").trim().slice(0,60)});}},true);</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo：默写学习五十音", "alternateName": ["Fudebo"], "description": "Fudebo 是练习日语五十音手写的 iPhone 应用。新假名先看教学卡，再描写、跟着淡色字写，最后凭记忆默写。应用逐笔检查笔画数、笔顺、方向和形状。每天写多少由你设定，写错的字第二天再练；想多写，可以进入练习场。", "inLanguage": "zh-Hans", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/zh-Hans/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
+<script id="fudebo-i18n" type="application/json">{"data": "/fudebo/assets/try-kana.json", "voice": {"おはよう": "/fudebo/assets/voice/ohayou.m4a", "こんにちは": "/fudebo/assets/voice/konnichiwa.m4a", "あ": "/fudebo/assets/voice/a.m4a", "い": "/fudebo/assets/voice/i.m4a", "う": "/fudebo/assets/voice/u.m4a", "え": "/fudebo/assets/voice/e.m4a", "お": "/fudebo/assets/voice/o.m4a", "か": "/fudebo/assets/voice/ka.m4a", "き": "/fudebo/assets/voice/ki.m4a", "く": "/fudebo/assets/voice/ku.m4a", "け": "/fudebo/assets/voice/ke.m4a", "こ": "/fudebo/assets/voice/ko.m4a"}, "romaji": {"あ": "a", "い": "i", "う": "u", "え": "e", "お": "o", "か": "ka", "き": "ki", "く": "ku", "け": "ke", "こ": "ko"}, "greet": {"hi": {"morning": "おはよう", "day": "こんにちは", "night": "こんばんは"}, "lines": {"morning": "早安，出门前写一页？", "day": "午安，休息时间写几个字吧。", "night": "睡前写一页，睡一觉会记得更牢。"}, "more": ["我是 Fudebo。我们从「あ」开始，先看我写一遍。", "不用背表，跟着写就能记住。", "写错没关系，我会示范给你看。", "今天先写一页就好，大约十分钟。"]}, "msg": {"fewer": "少了笔画：这个字有 %d 笔", "more": "多了笔画：这个字有 %d 笔", "direction": "第 %d 笔方向反了", "shape": "第 %d 笔的形状或位置不对", "order": "笔顺不对：第 %d 笔要先写别的", "lookalike": "你写的是「%@」，要写的是「%@」", "ok": "写对了"}}</script>
+<script defer src="/fudebo/assets/matcher.js?v=631f26ab"></script>
+<script defer src="/fudebo/assets/site.js?v=631f26ab"></script>
 </head>
 <body>
 <a class="skip" href="#main">跳转到正文</a>
@@ -50,6 +53,10 @@
 <main id="main">
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-text">
+<div class="greeter" data-greeter>
+<button type="button" class="greeter-bot" aria-label="跟 Fudebo 打招呼"><img class="stk greeter-img" src="/fudebo/assets/stk/wave.webp" alt="" width="105" height="112" loading="lazy" decoding="async"></button>
+<p class="bubble"><strong class="bubble-hi" lang="ja">こんにちは</strong><span class="bubble-line">我是 Fudebo。我们从「あ」开始，先看我写一遍。</span></p>
+</div>
 <p class="eyebrow"><strong class="store-name">Fudebo：默写学习五十音</strong><span class="eyebrow-sep" aria-hidden="true"> · </span><span>练习假名手写的 iPhone 应用</span></p>
 <h1><span class="ln">看读音。</span><span class="ln">用手指写出假名。</span></h1>
 <p class="lead">Fudebo 只练习手写。每个新字先学一小课，再逐步练到能默写。之后，题目给出读音或罗马字，你凭记忆写，应用逐笔检查。</p>
@@ -61,11 +68,28 @@
 
 <section class="band band-alt" id="why" aria-labelledby="h-why"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><h2 id="h-why">为什么 Fudebo 要你默写</h2></div></div>
-<ol class="why"><li class="why-pt card">回想比反复阅读更有助于记忆：一周后，练习回想的学生记住了 61%，重新阅读的学生记住了 40%（Roediger &amp; Karpicke, 2006）。Fudebo 只给出读音，假名由你自己写出来。</li><li class="why-pt card">手写有助于更快学会新字母：学习阿拉伯字母的成年人中，手写组需要的训练次数最少，读单词的表现也更好，尽管他们没有练过这项任务（Wiley &amp; Rapp, 2021）。Fudebo 只练手写。</li><li class="why-pt card">分散练习比集中练习记得更久：一项荟萃分析发现，分散练习的平均正确率为 47%，集中练习为 37%（Cepeda 等, 2006）。写错的假名第二天会再次出现；写对后，复习间隔会逐渐增加。</li><li class="why-pt card">形近假名放在一起练习，有助于学会区分它们（Kornell &amp; Bjork, 2008）；一个假名只有连续写对 3 次才算学会（Rawson &amp; Dunlosky, 2011）。</li></ol>
+<ol class="why"><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/1-recall.webp" alt="" width="640" height="320" loading="lazy" decoding="async"><p>回想比反复阅读更有助于记忆：一周后，练习回想的学生记住了 61%，重新阅读的学生记住了 40%（Roediger &amp; Karpicke, 2006）。Fudebo 只给出读音，假名由你自己写出来。</p><figure class="chart"><figcaption>一周后还记得的内容 <span class="chart-src">(Roediger &amp; Karpicke, 2006)</span></figcaption><div class="bar"><span class="bar-k">回忆</span><span class="bar-t"><span class="bar-f" style="width:61%"></span></span><span class="bar-n">61%</span></div><div class="bar bar-b"><span class="bar-k">重读</span><span class="bar-t"><span class="bar-f" style="width:40%"></span></span><span class="bar-n">40%</span></div></figure></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/2-handwrite.webp" alt="" width="640" height="240" loading="lazy" decoding="async"><p>手写有助于更快学会新字母：学习阿拉伯字母的成年人中，手写组需要的训练次数最少，读单词的表现也更好，尽管他们没有练过这项任务（Wiley &amp; Rapp, 2021）。Fudebo 只练手写。</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/4-spacing.webp" alt="" width="640" height="213" loading="lazy" decoding="async"><p>分散练习比集中练习记得更久：一项荟萃分析发现，分散练习的平均正确率为 47%，集中练习为 37%（Cepeda 等, 2006）。写错的假名第二天会再次出现；写对后，复习间隔会逐渐增加。</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/5-interleave.webp" alt="" width="640" height="357" loading="lazy" decoding="async"><p>形近假名放在一起练习，有助于学会区分它们（Kornell &amp; Bjork, 2008）；一个假名只有连续写对 3 次才算学会（Rawson &amp; Dunlosky, 2011）。</p></li></ol>
 <div class="refs"><p class="refs-title">参考文献</p><ol><li>Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li><li>Wiley, R. W., &amp; Rapp, B. (2021). The effects of handwriting experience on literacy learning. Psychological Science, 32(7), 1086–1103. <a href="https://doi.org/10.1177/0956797621993111">doi.org/10.1177/0956797621993111</a></li><li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354">doi.org/10.1037/0033-2909.132.3.354</a></li><li>Kornell, N., &amp; Bjork, R. A. (2008). Learning concepts and categories: Is spacing the &quot;enemy of induction&quot;? Psychological Science, 19(6), 585–592. <a href="https://doi.org/10.1111/j.1467-9280.2008.02127.x">doi.org/10.1111/j.1467-9280.2008.02127.x</a></li><li>Rawson, K. A., &amp; Dunlosky, J. (2011). Optimizing schedules of retrieval practice for durable and efficient learning: How much is enough? Journal of Experimental Psychology: General, 140(3), 283–302. <a href="https://doi.org/10.1037/a0023956">doi.org/10.1037/a0023956</a></li></ol></div>
 </div></section>
 
-<section class="band" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
+<section class="band" id="try" aria-labelledby="h-try"><div class="wrap split split-top">
+<div class="split-text">
+<p class="kicker">试写</p>
+<h2 id="h-try">凭记忆写一个假名</h2>
+<p>听读音，看罗马字，用手指或鼠标在格子里写出假名。这里使用与应用相同的笔画检查。写对 5 个就完成。</p>
+<p class="try-credit">字形与笔画数据：KanjiVG, CC BY-SA 3.0</p>
+</div>
+<div class="try card" data-try hidden>
+<div class="try-dots" aria-hidden="true"></div>
+<p class="try-q"><span class="try-label">写出这个假名</span><span class="try-romaji" lang="ja-Latn">a</span><button type="button" class="try-say" data-act="say" aria-label="再听一次"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></p>
+<div class="try-pad-wrap"><canvas class="try-pad" aria-label="写出这个假名"></canvas></div>
+<p class="try-msg" role="status" aria-live="polite"></p>
+<div class="try-btns"><button type="button" data-act="order">看笔顺</button><button type="button" data-act="clear">清除</button></div>
+<div class="try-end" hidden><p class="try-done">在应用中，每天练习一页，凭记忆写，直到记住。</p><div class="cta"><p class="soon"><span class="soon-dot" aria-hidden="true"></span>即将在 App Store 上线</p></div><button type="button" class="try-again" data-act="again">再写一轮</button></div>
+</div>
+</div></section>
+
+<section class="band band-alt" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/oops.webp" alt="" width="100" height="112" loading="lazy" decoding="async"><div><p class="kicker">写错笔画时</p><h2 id="h-check">写错的那一笔会标红</h2></div></div>
 <p>每写完一个字，Fudebo 会检查 4 项：笔画数、笔顺、每一笔的方向，以及形状和位置。</p><p>如果有一笔写错，那一笔会变红，随后播放正确的笔顺。你先描写一遍，再自己写一遍。如果写成了形状相近的另一个字，应用会告诉你写成了哪个字。</p><p>想不起来时，点按“提示一笔”，应用只会画出下一笔。</p>
@@ -77,7 +101,7 @@
 </figure>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-teach"><div class="wrap">
+<section class="band" aria-labelledby="h-teach"><div class="wrap">
 <div class="split">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><p class="kicker">课程</p><h2 id="h-teach">先学新字，再动手写</h2></div></div>
@@ -90,7 +114,7 @@
 <p class="steps-note">学完整行后，这一行的字会打乱顺序，再默写一轮。</p>
 </div></section>
 
-<section class="band" aria-labelledby="h-set"><div class="wrap split split-top">
+<section class="band band-alt" aria-labelledby="h-set"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/stamp.webp" alt="" width="161" height="112" loading="lazy" decoding="async"><div><p class="kicker">练习设置</p><h2 id="h-set">设置练习方式</h2></div></div>
 <p>在设置中调整，之后的每一页都会按你的设置出题。</p>
@@ -98,29 +122,29 @@
 <dl class="info card"><div><dt>出题方式</dt><dd>看罗马字写、听读音写、看平假名写片假名（或反过来）、看词义写单词。可以选多种，混合出题。平假名与片假名互换、单词练习属于 Pro。</dd></div><div><dt>提示</dt><dd>每次显示淡色字、先描写再去掉提示，或直接默写。</dd></div><div><dt>默写次数</dt><dd>每个新字写 1 到 3 遍。</dd></div><div><dt>判定</dt><dd>可选宽松、标准或严格，也可以设置笔顺错误是否算写错。</dd></div><div><dt>格线</dt><dd>可选田字格、米字格或无格线。描写时可以显示笔画序号。</dd></div><div><dt>每天的练习量</dt><dd>当天的一页按书写次数计算：可设为 10 到 200 次，每次增减 10 次；默认 40 次，约 10 分钟。在首页的今日一页卡片上点按练习量，再拖动调整。新字默认每次学一整行，也可以改成每天 3 个。</dd></div></dl>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-review"><div class="wrap">
+<section class="band" aria-labelledby="h-review"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/sleep.webp" alt="" width="159" height="112" loading="lazy" decoding="async"><div><p class="kicker">复习</p><h2 id="h-review">写错的字第二天再练</h2></div></div>
 <div class="cols"><p>写错的字会加入第二天的练习页。写对的字，每次再出现的间隔会逐渐变长。</p><p>前一行几乎所有字都记住时（最多只有 1 个还不熟），才会开放新的一行。当天复习写对，也可能当天开放。</p><p>应用不统计连续练习天数。隔几天再回来，可以接着练，已有的进度不会被扣除。</p></div>
 </div></section>
 
-<section class="band" id="practice" aria-labelledby="h-play"><div class="wrap">
+<section class="band band-alt" id="practice" aria-labelledby="h-play"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/write.webp" alt="" width="119" height="112" loading="lazy" decoding="async"><div><p class="kicker">练习场</p><h2 id="h-play">想多写，可以进入练习场</h2></div></div>
 <p class="play-intro">首页有单独的练习场入口，与今日一页分开。你可以按自己的时间继续写。</p>
 <div class="pls"><article class="pl card pl-main"><h3>无限书写</h3><p>先选范围：学过的、经常写错的、某一行，或自己选。字会轮流出现；同一个字连续 3 次不用提示写对，就算掌握，并从本轮移出。写错会重新计数，隔 2 或 3 个字再出现，下次先显示淡色字。顶部的小点显示每个字的进度。随时可以停下，进度会用于安排复习。</p></article><article class="pl card"><h3>易错字专项练习</h3><p>选出最近最常写错的 8 个字，用这些字开始无限书写。</p></article><article class="pl card"><h3>形近字对决 <span class="pro-tag">Pro</span></h3><p>将 さ/ち、ぬ/め、シ/ツ、ソ/ン 等形近字成对随机出题。连续答对 6 题即可完成。</p></article><article class="pl card"><h3>听写 <span class="pro-tag">Pro</span></h3><p>只听读音，不显示罗马字。也可以加入单词。</p></article><article class="pl card"><h3>平片互换 <span class="pro-tag">Pro</span></h3><p>看平假名写片假名，或反过来写。</p></article><article class="pl card"><h3>60 秒挑战 <span class="pro-tag">Pro</span></h3><p>听读音并书写，看看 60 秒内能写对多少个。应用会保留你的最高成绩。</p></article></div>
 <p class="steps-note">形近字对决、听写、平片互换和 60 秒挑战属于 Pro。免费版可以用已学的平假名进行无限书写和易错字专项练习。</p>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-copy"><div class="wrap">
+<section class="band" aria-labelledby="h-copy"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/read.webp" alt="" width="104" height="112" loading="lazy" decoding="async"><div><p class="kicker">字帖与手写记录</p><h2 id="h-copy">在字帖本中查看写过的字</h2></div></div>
 <div class="cbs"><article class="cb card"><h3>写 12 遍（字帖）</h3><p>在五十音图中点按任意一个字，选择“写 12 遍（字帖）”。其中 4 格描写、2 格跟着淡色字写、6 格在空白处写，每格都会检查。</p></article><article class="cb card"><h3>我的字帖本</h3><p>每天的练习页按日期保存，可以翻看以前写的内容。</p></article><article class="cb card"><h3>单字进步</h3><p>将同一个字第一次、中间一次和最近一次的写法并排显示。点按其中一个，可以重播当时的书写过程。练习页和单个字的进步记录可以保存为图片并分享。</p></article></div>
 </div></section>
 
-<section class="band" aria-labelledby="h-info"><div class="wrap two">
+<section class="band band-alt" aria-labelledby="h-info"><div class="wrap two">
 <div><h2 id="h-info">基本信息</h2><dl class="info card"><div><dt>学习内容</dt><dd>46 个基础平假名。Pro 增加片假名、濁音、半濁音、拗音和 66 个基础单词。</dd></div><div><dt>每天的练习量</dt><dd>今日一页默认写 40 次（约 10 分钟），可设为 10 到 200 次。想多写，可以进入练习场。</dd></div><div><dt>书写方式</dt><dd>用手指在屏幕上写。</dd></div><div><dt>读音</dt><dd>应用内置录制好的日语读音。少数没有录音的词使用 iPhone 内置的日语语音。</dd></div><div><dt>账号</dt><dd>无需账号。开启 iCloud 后，手写记录和学习进度会同步到你自己的 iCloud，换手机后可以继续。</dd></div><div><dt>设备</dt><dd>需要 iOS 17 或更新版本的 iPhone，也可在 iPad 上运行。</dd></div></dl></div>
 <div><h2 id="h-not">不包含的内容</h2><ul class="limits"><li>只练习写假名，不教语法、汉字或会话。</li><li>检查笔画数、笔顺、方向和形状，不评价字写得好不好看。</li><li>66 个基础单词用于练习已学的假名，不是一门词汇课程。</li></ul></div>
 </div></section>
 
-<section class="band band-alt" id="plans" aria-labelledby="h-plans"><div class="wrap">
+<section class="band" id="plans" aria-labelledby="h-plans"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/cheer.webp" alt="" width="118" height="112" loading="lazy" decoding="async"><div><h2 id="h-plans">免费版与 Pro</h2></div></div>
 <div class="plans">
 <article class="plan card" aria-labelledby="h-free"><h3 id="h-free">免费版</h3><ul><li>46 个基础平假名的课程和练习</li><li>每天一页，练习量由你设定</li><li>练习场：用已学的平假名进行无限书写和易错字专项练习</li><li>已学平假名的字帖</li><li>我的字帖本和每个字的进步记录</li><li>广告：首页底部的横幅广告，以及完成一页后每天最多显示 1 次的广告</li></ul></article>

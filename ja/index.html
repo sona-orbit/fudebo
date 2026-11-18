@@ -35,9 +35,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/fudebo/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/fudebo/assets/icon-180.png">
 <link rel="preload" as="image" href="/fudebo/assets/kv/hero-940.webp" imagesrcset="/fudebo/assets/kv/hero-560.webp 560w, /fudebo/assets/kv/hero-940.webp 940w" imagesizes="(min-width: 900px) 460px, 92vw" fetchpriority="high">
-<link rel="stylesheet" href="/fudebo/assets/style.css?v=0626dd7e">
+<link rel="stylesheet" href="/fudebo/assets/style.css?v=75194f43">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||a.getAttribute("aria-label")||"").trim().slice(0,60)});}},true);</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo：書いて覚えるひらがな・カタカナ", "alternateName": ["Fudebo"], "description": "Fudeboは、iPhoneでひらがな・カタカナの手書きを練習するアプリです。新しいかなは説明を見てからなぞり書き、薄い手本を見て書き、最後に何も見ずに書きます。書き順や線の向きを1画ずつ確認。毎日の練習量を決められ、間違えた字は翌日にもう一度出ます。", "inLanguage": "ja", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/ja/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
+<script id="fudebo-i18n" type="application/json">{"data": "/fudebo/assets/try-kana.json", "voice": {"おはよう": "/fudebo/assets/voice/ohayou.m4a", "こんにちは": "/fudebo/assets/voice/konnichiwa.m4a", "あ": "/fudebo/assets/voice/a.m4a", "い": "/fudebo/assets/voice/i.m4a", "う": "/fudebo/assets/voice/u.m4a", "え": "/fudebo/assets/voice/e.m4a", "お": "/fudebo/assets/voice/o.m4a", "か": "/fudebo/assets/voice/ka.m4a", "き": "/fudebo/assets/voice/ki.m4a", "く": "/fudebo/assets/voice/ku.m4a", "け": "/fudebo/assets/voice/ke.m4a", "こ": "/fudebo/assets/voice/ko.m4a"}, "romaji": {"あ": "a", "い": "i", "う": "u", "え": "e", "お": "o", "か": "ka", "き": "ki", "く": "ku", "け": "ke", "こ": "ko"}, "greet": {"hi": {"morning": "おはよう", "day": "こんにちは", "night": "こんばんは"}, "lines": {"morning": "おはようございます。出かける前に1ページ書きませんか？", "day": "こんにちは。休憩中に何文字か書いてみましょう。", "night": "寝る前に1ページ。眠っている間に記憶に定着します。"}, "more": ["私はFudebo。まずは「あ」から。書くところを見てください。", "表を暗記しなくても、書いて覚えられます。", "間違えても大丈夫。私がお手本を見せます。", "今日はまず1ページだけ。10分ほどで終わります。"]}, "msg": {"fewer": "画数が足りません：この字は %d 画です", "more": "画数が多すぎます：この字は %d 画です", "direction": "%d画目の向きが逆です", "shape": "%d画目の形または位置が違います", "order": "書き順が違います：%d画目の前に書く画があります", "lookalike": "書いたのは「%@」、正しくは「%@」です", "ok": "正解"}}</script>
+<script defer src="/fudebo/assets/matcher.js?v=631f26ab"></script>
+<script defer src="/fudebo/assets/site.js?v=631f26ab"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -50,6 +53,10 @@
 <main id="main">
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-text">
+<div class="greeter" data-greeter>
+<button type="button" class="greeter-bot" aria-label="Fudeboにあいさつ"><img class="stk greeter-img" src="/fudebo/assets/stk/wave.webp" alt="" width="105" height="112" loading="lazy" decoding="async"></button>
+<p class="bubble"><strong class="bubble-hi" lang="ja">こんにちは</strong><span class="bubble-line">私はFudebo。まずは「あ」から。書くところを見てください。</span></p>
+</div>
 <p class="eyebrow"><strong class="store-name">Fudebo：書いて覚えるひらがな・カタカナ</strong><span class="eyebrow-sep" aria-hidden="true"> · </span><span>かなの手書きを練習するiPhoneアプリ</span></p>
 <h1><span class="ln">読みを見て、</span><span class="ln">指でかなを書きます。</span></h1>
 <p class="lead">Fudeboは手書きの練習に特化したアプリです。新しい字は短い説明から始め、何も見ずに書けるところまで練習します。その後は音声やローマ字を手がかりに書き、1画ずつ確認します。</p>
@@ -61,11 +68,28 @@
 
 <section class="band band-alt" id="why" aria-labelledby="h-why"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><h2 id="h-why">Fudeboで思い出して書く理由</h2></div></div>
-<ol class="why"><li class="why-pt card">読み返すより、思い出す練習。1週間後、思い出す練習をした学生が覚えていた割合は61%、読み返した学生は40%でした（Roediger &amp; Karpicke, 2006）。Fudeboは音だけを示し、仮名は自分で書きます。</li><li class="why-pt card">手で書くと、新しい文字をより早く学べる。アラビア文字を手書きで学んだ成人は、必要な練習回数が最も少なく、練習していなかった単語の読みでも成績が良好でした（Wiley &amp; Rapp, 2021）。Fudeboでは手書きだけを練習します。</li><li class="why-pt card">まとめて行うより、間隔を空けて練習する。メタ分析では、平均正答率は間隔を空けた練習で47%、まとめて行う練習で37%でした（Cepeda ほか, 2006）。間違えた仮名は翌日に再び出て、正しく書けると次までの間隔が延びます。</li><li class="why-pt card">似た仮名は並べて練習し、違いを見分けられるようにします（Kornell &amp; Bjork, 2008）。仮名は3回連続で正しく書けてから、学習済みとします（Rawson &amp; Dunlosky, 2011）。</li></ol>
+<ol class="why"><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/1-recall.webp" alt="" width="640" height="320" loading="lazy" decoding="async"><p>読み返すより、思い出す練習。1週間後、思い出す練習をした学生が覚えていた割合は61%、読み返した学生は40%でした（Roediger &amp; Karpicke, 2006）。Fudeboは音だけを示し、仮名は自分で書きます。</p><figure class="chart"><figcaption>一週間後に覚えていた割合 <span class="chart-src">(Roediger &amp; Karpicke, 2006)</span></figcaption><div class="bar"><span class="bar-k">思い出して答えた</span><span class="bar-t"><span class="bar-f" style="width:61%"></span></span><span class="bar-n">61%</span></div><div class="bar bar-b"><span class="bar-k">読み返した</span><span class="bar-t"><span class="bar-f" style="width:40%"></span></span><span class="bar-n">40%</span></div></figure></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/2-handwrite.webp" alt="" width="640" height="240" loading="lazy" decoding="async"><p>手で書くと、新しい文字をより早く学べる。アラビア文字を手書きで学んだ成人は、必要な練習回数が最も少なく、練習していなかった単語の読みでも成績が良好でした（Wiley &amp; Rapp, 2021）。Fudeboでは手書きだけを練習します。</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/4-spacing.webp" alt="" width="640" height="213" loading="lazy" decoding="async"><p>まとめて行うより、間隔を空けて練習する。メタ分析では、平均正答率は間隔を空けた練習で47%、まとめて行う練習で37%でした（Cepeda ほか, 2006）。間違えた仮名は翌日に再び出て、正しく書けると次までの間隔が延びます。</p></li><li class="why-pt card"><img class="why-pic" src="/fudebo/assets/why/5-interleave.webp" alt="" width="640" height="357" loading="lazy" decoding="async"><p>似た仮名は並べて練習し、違いを見分けられるようにします（Kornell &amp; Bjork, 2008）。仮名は3回連続で正しく書けてから、学習済みとします（Rawson &amp; Dunlosky, 2011）。</p></li></ol>
 <div class="refs"><p class="refs-title">参考文献</p><ol><li>Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li><li>Wiley, R. W., &amp; Rapp, B. (2021). The effects of handwriting experience on literacy learning. Psychological Science, 32(7), 1086–1103. <a href="https://doi.org/10.1177/0956797621993111">doi.org/10.1177/0956797621993111</a></li><li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354">doi.org/10.1037/0033-2909.132.3.354</a></li><li>Kornell, N., &amp; Bjork, R. A. (2008). Learning concepts and categories: Is spacing the &quot;enemy of induction&quot;? Psychological Science, 19(6), 585–592. <a href="https://doi.org/10.1111/j.1467-9280.2008.02127.x">doi.org/10.1111/j.1467-9280.2008.02127.x</a></li><li>Rawson, K. A., &amp; Dunlosky, J. (2011). Optimizing schedules of retrieval practice for durable and efficient learning: How much is enough? Journal of Experimental Psychology: General, 140(3), 283–302. <a href="https://doi.org/10.1037/a0023956">doi.org/10.1037/a0023956</a></li></ol></div>
 </div></section>
 
-<section class="band" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
+<section class="band" id="try" aria-labelledby="h-try"><div class="wrap split split-top">
+<div class="split-text">
+<p class="kicker">書いてみる</p>
+<h2 id="h-try">覚えて書いてみる</h2>
+<p>音を聞き、ローマ字を見て、指かマウスでマス目にかなを書いてください。このページでは、アプリと同じ方法で書いた画をチェックします。5つ正しく書けたら終了です。</p>
+<p class="try-credit">字形と画のデータ：KanjiVG, CC BY-SA 3.0</p>
+</div>
+<div class="try card" data-try hidden>
+<div class="try-dots" aria-hidden="true"></div>
+<p class="try-q"><span class="try-label">このかなを書いてください</span><span class="try-romaji" lang="ja-Latn">a</span><button type="button" class="try-say" data-act="say" aria-label="もう一度聞く"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></p>
+<div class="try-pad-wrap"><canvas class="try-pad" aria-label="このかなを書いてください"></canvas></div>
+<p class="try-msg" role="status" aria-live="polite"></p>
+<div class="try-btns"><button type="button" data-act="order">書き順を見る</button><button type="button" data-act="clear">消去</button></div>
+<div class="try-end" hidden><p class="try-done">アプリでは毎日1ページずつ、覚えるまで思い出して書きます。</p><div class="cta"><p class="soon"><span class="soon-dot" aria-hidden="true"></span>App Storeで近日公開</p></div><button type="button" class="try-again" data-act="again">もう一度書く</button></div>
+</div>
+</div></section>
+
+<section class="band band-alt" id="how" aria-labelledby="h-check"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/oops.webp" alt="" width="100" height="112" loading="lazy" decoding="async"><div><p class="kicker">書いた画が違うとき</p><h2 id="h-check">違う画を赤く表示します</h2></div></div>
 <p>1文字書くごとに、画数、書き順、各画の向き、形と位置を確認します。</p><p>違う画は赤くなり、正しい書き順が再生されます。手本を1回なぞってから、自分でもう一度書きます。形の似た別の字を書いた場合は、どの字になったかを知らせます。</p><p>思い出せないときは「1画ヒント」を押すと、次の1画だけを表示します。</p>
@@ -77,7 +101,7 @@
 </figure>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-teach"><div class="wrap">
+<section class="band" aria-labelledby="h-teach"><div class="wrap">
 <div class="split">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/think.webp" alt="" width="99" height="112" loading="lazy" decoding="async"><div><p class="kicker">レッスン</p><h2 id="h-teach">新しい字は説明を見てから書きます</h2></div></div>
@@ -90,7 +114,7 @@
 <p class="steps-note">行全体を学んだ後は、字をシャッフルしてもう一度、何も見ずに書きます。</p>
 </div></section>
 
-<section class="band" aria-labelledby="h-set"><div class="wrap split split-top">
+<section class="band band-alt" aria-labelledby="h-set"><div class="wrap split split-top">
 <div class="split-text">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/stamp.webp" alt="" width="161" height="112" loading="lazy" decoding="async"><div><p class="kicker">練習の設定</p><h2 id="h-set">練習方法を設定します</h2></div></div>
 <p>設定で変更すると、それ以降のページに反映されます。</p>
@@ -98,29 +122,29 @@
 <dl class="info card"><div><dt>出題方法</dt><dd>ローマ字を見て書く、音声を聞いて書く、ひらがなを見てカタカナを書く（またはその逆）、意味を見て単語を書く方法があります。複数選ぶと混ぜて出題します。ひらがなとカタカナの書き換え、単語はProで使えます。</dd></div><div><dt>ヒント</dt><dd>毎回薄い手本を表示する、最初になぞってから手本を消す、最初から何も見ずに書く方法を選べます。</dd></div><div><dt>新しい字を見ずに書く回数</dt><dd>1～3回から選べます。</dd></div><div><dt>判定</dt><dd>甘め、標準、厳しめから選び、書き順の間違いを誤答に含めるかも設定できます。</dd></div><div><dt>マス目</dt><dd>十字の補助線、斜線入りの補助線、補助線なしから選べます。なぞるときに画の番号も表示できます。</dd></div><div><dt>毎日の練習量</dt><dd>その日のページは書く回数で数えます。10～200回を10回刻みで設定でき、初期設定は40回、約10分です。ホーム画面の今日の1ページカードにある回数をタップし、ドラッグして変更します。新しい字は初期設定では1行ずつ進みますが、1日3字にもできます。</dd></div></dl>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-review"><div class="wrap">
+<section class="band" aria-labelledby="h-review"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/sleep.webp" alt="" width="159" height="112" loading="lazy" decoding="async"><div><p class="kicker">復習</p><h2 id="h-review">間違えた字は翌日にもう一度書きます</h2></div></div>
 <div class="cols"><p>間違えた字は翌日のページに入ります。正しく書けた字は、次に出るまでの間隔が少しずつ長くなります。</p><p>前の行のほぼすべての字を覚えると、次の行に進めます。まだ定着していない字は多くても1字です。その日の復習で正しく書ければ、同じ日に次の行が開くこともあります。</p><p>連続日数は数えません。数日休んでも、戻って続きから書けます。進み具合が取り消されることはありません。</p></div>
 </div></section>
 
-<section class="band" id="practice" aria-labelledby="h-play"><div class="wrap">
+<section class="band band-alt" id="practice" aria-labelledby="h-play"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/write.webp" alt="" width="119" height="112" loading="lazy" decoding="async"><div><p class="kicker">練習場</p><h2 id="h-play">もっと書くときは練習場へ</h2></div></div>
 <p class="play-intro">練習場はホーム画面に今日の1ページとは別の入口があります。好きなだけ書けます。</p>
 <div class="pls"><article class="pl card pl-main"><h3>書き放題</h3><p>まず、学習済み、よく間違える字、特定の行、自分で選んだ字から範囲を選びます。字は繰り返し出題され、ヒントなしで3回続けて正しく書くと、その字は習得済みとして出題から外れます。間違えると回数は0に戻り、2～3字後に再登場します。そのときは薄い手本から始まります。上部の小さな点で字ごとの進み具合を確認できます。いつでもやめられ、結果は復習の予定に反映されます。</p></article><article class="pl card"><h3>間違えやすい文字を練習</h3><p>最近よく間違えた8字を選び、書き放題で練習します。</p></article><article class="pl card"><h3>似た文字対決 <span class="pro-tag">Pro</span></h3><p>さ／ち、ぬ／め、シ／ツ、ソ／ンのような似た字の組を、順番を変えて出題します。6問続けて正解すると終了です。</p></article><article class="pl card"><h3>聞き取り書き <span class="pro-tag">Pro</span></h3><p>ローマ字は表示せず、音声だけを聞いて書きます。単語も追加できます。</p></article><article class="pl card"><h3>ひらがな↔カタカナ <span class="pro-tag">Pro</span></h3><p>ひらがなを見てカタカナを書くか、その逆を練習します。</p></article><article class="pl card"><h3>60秒チャレンジ <span class="pro-tag">Pro</span></h3><p>音声を聞いて、60秒で何字正しく書けるか試します。最高記録を保存します。</p></article></div>
 <p class="steps-note">似た文字対決、聞き取り書き、ひらがな↔カタカナ、60秒チャレンジはProで使えます。無料版では、学習済みのひらがなで書き放題と間違えやすい文字を練習を使えます。</p>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-copy"><div class="wrap">
+<section class="band" aria-labelledby="h-copy"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/read.webp" alt="" width="104" height="112" loading="lazy" decoding="async"><div><p class="kicker">書き取りと筆跡</p><h2 id="h-copy">書いた字を自分の練習帳で見返します</h2></div></div>
 <div class="cbs"><article class="cb card"><h3>12回書く（お手本帳）</h3><p>五十音表の字をタップし、「12回書く（お手本帳）」を選びます。4マスでなぞり、2マスでは薄い手本を見て、6マスでは何も見ずに書きます。各マスで書いた字を確認します。</p></article><article class="cb card"><h3>マイお手本帳</h3><p>毎日の練習シートが日付ごとに保存され、前の日の分も見返せます。</p></article><article class="cb card"><h3>1字ごとの上達</h3><p>同じ字を最初、中間、最近に書いたときの筆跡を並べて見られます。タップすると書いた様子を再生します。練習シートや字ごとの進み具合は、画像として保存して共有できます。</p></article></div>
 </div></section>
 
-<section class="band" aria-labelledby="h-info"><div class="wrap two">
+<section class="band band-alt" aria-labelledby="h-info"><div class="wrap two">
 <div><h2 id="h-info">アプリの内容</h2><dl class="info card"><div><dt>収録内容</dt><dd>基本のひらがな46字を練習できます。Proではカタカナ、濁音・半濁音・拗音、基本の単語66語が加わります。</dd></div><div><dt>毎日の練習</dt><dd>今日の1ページの初期設定は40回の書き取りで、約10分です。10～200回に変更できます。もっと書くときは練習場を使います。</dd></div><div><dt>書き方</dt><dd>画面に指で書きます。</dd></div><div><dt>読み上げ</dt><dd>アプリに収録された日本語の録音を再生します。録音のない一部の単語には、iPhone内蔵の日本語音声を使います。</dd></div><div><dt>アカウント</dt><dd>不要です。iCloudがオンの場合、筆跡と学習の進み具合が自分のiCloudに同期され、新しいiPhoneでも続けられます。</dd></div><div><dt>対応端末</dt><dd>iOS 17以降のiPhoneで使えます。iPadでも動作します。</dd></div></dl></div>
 <div><h2 id="h-not">できないこと</h2><ul class="limits"><li>練習するのはかなの書き方だけです。文法、漢字、会話は扱いません。</li><li>画数、書き順、向き、形を確認します。字の見た目の美しさは採点しません。</li><li>基本の単語66語は、学んだかなを書くためのものです。単語を学ぶためのコースではありません。</li></ul></div>
 </div></section>
 
-<section class="band band-alt" id="plans" aria-labelledby="h-plans"><div class="wrap">
+<section class="band" id="plans" aria-labelledby="h-plans"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/cheer.webp" alt="" width="118" height="112" loading="lazy" decoding="async"><div><h2 id="h-plans">無料版とPro</h2></div></div>
 <div class="plans">
 <article class="plan card" aria-labelledby="h-free"><h3 id="h-free">無料版</h3><ul><li>基本のひらがな46字のレッスンと練習</li><li>設定した量の練習を1日1ページ</li><li>練習場では、学習済みのひらがなで書き放題と間違えやすい文字を練習を利用できます</li><li>学習済みのひらがなの書き取り練習</li><li>練習帳と字ごとの進み具合</li><li>広告あり。ホーム画面下部のバナーと、ページを終えた後に1日最大1回表示されます</li></ul></article>
