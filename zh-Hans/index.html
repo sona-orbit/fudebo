@@ -35,7 +35,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/fudebo/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/fudebo/assets/icon-180.png">
 <link rel="preload" as="image" href="/fudebo/assets/kv/hero-940.webp" imagesrcset="/fudebo/assets/kv/hero-560.webp 560w, /fudebo/assets/kv/hero-940.webp 940w" imagesizes="(min-width: 900px) 460px, 92vw" fetchpriority="high">
-<link rel="stylesheet" href="/fudebo/assets/style.css?v=75194f43">
+<link rel="stylesheet" href="/fudebo/assets/style.css?v=6887b923">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||a.getAttribute("aria-label")||"").trim().slice(0,60)});}},true);</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo：默写学习五十音", "alternateName": ["Fudebo"], "description": "Fudebo 是练习日语五十音手写的 iPhone 应用。新假名先看教学卡，再描写、跟着淡色字写，最后凭记忆默写。应用逐笔检查笔画数、笔顺、方向和形状。每天写多少由你设定，写错的字第二天再练；想多写，可以进入练习场。", "inLanguage": "zh-Hans", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/zh-Hans/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
 <script id="fudebo-i18n" type="application/json">{"data": "/fudebo/assets/try-kana.json", "voice": {"おはよう": "/fudebo/assets/voice/ohayou.m4a", "こんにちは": "/fudebo/assets/voice/konnichiwa.m4a", "あ": "/fudebo/assets/voice/a.m4a", "い": "/fudebo/assets/voice/i.m4a", "う": "/fudebo/assets/voice/u.m4a", "え": "/fudebo/assets/voice/e.m4a", "お": "/fudebo/assets/voice/o.m4a", "か": "/fudebo/assets/voice/ka.m4a", "き": "/fudebo/assets/voice/ki.m4a", "く": "/fudebo/assets/voice/ku.m4a", "け": "/fudebo/assets/voice/ke.m4a", "こ": "/fudebo/assets/voice/ko.m4a"}, "romaji": {"あ": "a", "い": "i", "う": "u", "え": "e", "お": "o", "か": "ka", "き": "ki", "く": "ku", "け": "ke", "こ": "ko"}, "greet": {"hi": {"morning": "おはよう", "day": "こんにちは", "night": "こんばんは"}, "lines": {"morning": "早安，出门前写一页？", "day": "午安，休息时间写几个字吧。", "night": "睡前写一页，睡一觉会记得更牢。"}, "more": ["我是 Fudebo。我们从「あ」开始，先看我写一遍。", "不用背表，跟着写就能记住。", "写错没关系，我会示范给你看。", "今天先写一页就好，大约十分钟。"]}, "msg": {"fewer": "少了笔画：这个字有 %d 笔", "more": "多了笔画：这个字有 %d 笔", "direction": "第 %d 笔方向反了", "shape": "第 %d 笔的形状或位置不对", "order": "笔顺不对：第 %d 笔要先写别的", "lookalike": "你写的是「%@」，要写的是「%@」", "ok": "写对了"}}</script>
@@ -146,10 +146,16 @@
 
 <section class="band" id="plans" aria-labelledby="h-plans"><div class="wrap">
 <div class="sec-head"><img class="stk " src="/fudebo/assets/stk/cheer.webp" alt="" width="118" height="112" loading="lazy" decoding="async"><div><h2 id="h-plans">免费版与 Pro</h2></div></div>
+<p class="plans-lead">说真的，免费版就够你把平假名写熟了。想把片假名和单词也写熟，再升级。</p>
 <div class="plans">
-<article class="plan card" aria-labelledby="h-free"><h3 id="h-free">免费版</h3><ul><li>46 个基础平假名的课程和练习</li><li>每天一页，练习量由你设定</li><li>练习场：用已学的平假名进行无限书写和易错字专项练习</li><li>已学平假名的字帖</li><li>我的字帖本和每个字的进步记录</li><li>广告：首页底部的横幅广告，以及完成一页后每天最多显示 1 次的广告</li></ul></article>
-<article class="plan plan-pro" aria-labelledby="h-pro"><h3 id="h-pro">Pro</h3><ul><li>片假名</li><li>濁音、半濁音和拗音</li><li>66 个基础单词</li><li>看平假名写片假名（或反过来）的题目</li><li>每天不限练习页数</li><li>指定练习某一行</li><li>练习场的全部模式：形近字对决、听写、平片互换、60 秒挑战</li><li>所有字的字帖</li><li>无广告</li></ul><p class="plan-note">可在应用中选择按月订阅、按年订阅或一次性购买。</p></article>
+<article class="plan card" aria-labelledby="h-free"><h3 id="h-free">免费版已有</h3><ul><li>46 个平假名：入门课、各行课程和单字教学卡</li><li>每天一页，练习量自己调，写错的字第二天再练</li><li>无限书写：学过的平假名，写到熟练为止</li><li>字帖：学过的平假名每个写 12 遍</li><li>我的字帖本、单字进步对比、iCloud 同步</li><li>每个字、每个词都有日语读音</li></ul></article>
+<article class="plan plan-pro" aria-labelledby="h-pro"><h3 id="h-pro">Pro 还多这些</h3><ul><li>片假名，以及浊音、半浊音、拗音 <span class="trial-tag">先在 App 内试用</span></li><li>66 个基础单词，用学过的假名写 <span class="trial-tag">先在 App 内试用</span></li><li>形近字对决：分清 さ／ち、シ／ツ <span class="trial-tag">先在 App 内试用</span></li><li>听写、平片互换、60 秒挑战 <span class="trial-tag">先在 App 内试用</span></li><li>写完今日一页还能继续写，也能指定练某一行</li><li>没有广告</li></ul></article>
 </div>
+<div class="plans-more">
+<article class="plan-why card" aria-labelledby="h-worth"><div class="sec-head"><img class="stk " src="/fudebo/assets/stk/read.webp" alt="" width="104" height="112" loading="lazy" decoding="async"><h3 id="h-worth">为什么值得</h3></div><ul><li>一本假名练习本的价钱，可以无限次书写</li><li>写字时没有广告打断</li><li>花了钱，更容易每天打开来写（真的）</li><li>支持一人开发的小 App，让它持续更新</li></ul></article>
+<div class="plan-opts"><ul class="opts"><li class="opt opt-best"><strong>买断</strong><span class="best-tag">最推荐</span><span>付一次，之后一直是 Pro</span></li><li class="opt"><strong>每年</strong><span>自动续订，比月订省一半以上</span></li><li class="opt"><strong>每月</strong><span>自动续订，随时可以取消</span></li></ul><p class="plans-where">在 App 内选择</p></div>
+</div>
+<p class="free-forever">不付费也可以一直使用。</p>
 </div></section>
 
 <section class="band end" aria-labelledby="h-end"><div class="wrap end-card">
