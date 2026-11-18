@@ -21,23 +21,23 @@
    },
    "es": {
     "title": "¿No consigues memorizar los kana? Escríbelos de memoria",
-    "desc": "¿Miras una tabla de kana, pero aún no puedes escribirlos? Prueba 5 formas de practicar basadas en estudios y una rutina diaria de 10 minutos.",
-    "hero_alt": "Ilustración de un robot cuadrado amarillo con gafas redondas que sostiene un bolígrafo sobre papel cuadriculado en blanco"
+    "desc": "¿Reconoces los kana, pero no sabes escribirlos? Prueba 5 formas de practicar basadas en estudios y una rutina diaria de 10 minutos con papel y lápiz.",
+    "hero_alt": "Ilustración de un robot cuadrado amarillo con gafas redondas que sostiene un lápiz sobre papel cuadriculado en blanco"
    },
    "de": {
-    "title": "Kana merken: Schreib sie aus dem Gedächtnis statt abzulesen",
-    "desc": "Du schaust immer wieder auf die Kana-Tabelle, kannst die Zeichen aber nicht schreiben? Probiere 5 Forschungsmethoden und eine tägliche 10-Minuten-Routine mit Stift und Papier.",
-    "hero_alt": "Illustration eines gelben, eckigen Roboters mit runder Brille, der einen Stift über leeres Karopapier hält"
+    "title": "Kana merken: Schreib sie aus dem Gedächtnis",
+    "desc": "Du schaust immer wieder auf die Kana-Tabelle, kannst die Zeichen aber nicht schreiben? Probiere 5 Methoden und eine tägliche 10-Minuten-Routine mit Stift und Papier.",
+    "hero_alt": "Illustration eines gelben, quadratischen Roboters mit runder Brille, der einen Stift über kariertes Papier hält"
    },
    "fr": {
-    "title": "Comment mémoriser les kana en les écrivant de mémoire",
-    "desc": "Vous regardez souvent un tableau de kana, mais n'arrivez pas à les écrire ? Essayez 5 méthodes et une routine de 10 minutes par jour, avec papier et stylo.",
-    "hero_alt": "Illustration d'un robot carré jaune aux lunettes rondes tenant un stylo au-dessus d'une feuille quadrillée vierge"
+    "title": "Vous n'arrivez pas à mémoriser les kana ? Écrivez-les de mémoire",
+    "desc": "Vous reconnaissez les kana sans pouvoir les écrire ? Essayez 5 méthodes fondées sur la recherche et une routine de 10 minutes avec papier et crayon.",
+    "hero_alt": "Illustration d'un robot carré jaune à lunettes rondes tenant un crayon au-dessus d'une feuille quadrillée vierge"
    },
    "pt-BR": {
-    "title": "Não consegue memorizar os kanas? Escreva de memória",
-    "desc": "Você consulta a tabela de kanas, mas não consegue escrevê-los? Veja 5 formas de praticar e uma rotina diária de 10 minutos com papel e caneta.",
-    "hero_alt": "Ilustração de um robô quadrado amarelo de óculos redondos segurando uma caneta sobre uma folha quadriculada em branco"
+    "title": "Não consegue memorizar os kana? Escreva de memória",
+    "desc": "Você olha a tabela de kana, mas não consegue escrevê-los? Conheça 5 formas de praticar baseadas em pesquisas e uma rotina diária de 10 minutos.",
+    "hero_alt": "Ilustração de um robô amarelo e quadrado, de óculos redondos, segurando uma caneta sobre papel quadriculado em branco"
    }
   }
  }
