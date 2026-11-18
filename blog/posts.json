@@ -1,0 +1,44 @@
+[
+ {
+  "slug": "memorize-kana-by-writing-from-memory",
+  "date": "2026-11-18",
+  "run": "/Users/johnkeng/Works/自製 Apple APP/官網SEO/部落格/fudebo/runs/2026-11-18-memorize-kana-by-writing-from-memory",
+  "langs": {
+   "zh-Hant": {
+    "title": "五十音背不起來？看表十遍，不如憑記憶寫一遍",
+    "desc": "五十音表看了很多遍，蓋起來還是寫不出來？整理記憶研究的 5 個做法：先想再看答案、用手寫、隔天再寫、形近字放一起練，附一個每天 10 分鐘、用紙筆就能照做的練習法。",
+    "hero_alt": "插畫：戴圓眼鏡的黃色方塊機器人拿著筆，在空白的方格紙上寫字"
+   },
+   "zh-Hans": {
+    "title": "五十音背不起来？看表十遍，不如凭记忆写一遍",
+    "desc": "五十音表看了很多遍，盖起来还是写不出来？整理记忆研究的 5 个做法：先想再看答案、用手写、隔天再写、形近字放一起练，附一个每天 10 分钟、用纸笔就能照做的练习法。",
+    "hero_alt": "插画：戴圆眼镜的黄色方块机器人拿著笔，在空白的方格纸上写字"
+   },
+   "en": {
+    "title": "Can't Memorize Kana? Try Writing Them From Memory",
+    "desc": "Keep looking at a kana chart but still can't write the characters? Try 5 research-backed ways to practice, plus a 10-minute daily routine with pen and paper.",
+    "hero_alt": "Illustration of a yellow square robot with round glasses holding a pen over blank grid paper"
+   },
+   "es": {
+    "title": "¿No consigues memorizar los kana? Escríbelos de memoria",
+    "desc": "¿Miras una tabla de kana, pero aún no puedes escribirlos? Prueba 5 formas de practicar basadas en estudios y una rutina diaria de 10 minutos.",
+    "hero_alt": "Ilustración de un robot cuadrado amarillo con gafas redondas que sostiene un bolígrafo sobre papel cuadriculado en blanco"
+   },
+   "de": {
+    "title": "Kana merken: Schreib sie aus dem Gedächtnis statt abzulesen",
+    "desc": "Du schaust immer wieder auf die Kana-Tabelle, kannst die Zeichen aber nicht schreiben? Probiere 5 Forschungsmethoden und eine tägliche 10-Minuten-Routine mit Stift und Papier.",
+    "hero_alt": "Illustration eines gelben, eckigen Roboters mit runder Brille, der einen Stift über leeres Karopapier hält"
+   },
+   "fr": {
+    "title": "Comment mémoriser les kana en les écrivant de mémoire",
+    "desc": "Vous regardez souvent un tableau de kana, mais n'arrivez pas à les écrire ? Essayez 5 méthodes et une routine de 10 minutes par jour, avec papier et stylo.",
+    "hero_alt": "Illustration d'un robot carré jaune aux lunettes rondes tenant un stylo au-dessus d'une feuille quadrillée vierge"
+   },
+   "pt-BR": {
+    "title": "Não consegue memorizar os kanas? Escreva de memória",
+    "desc": "Você consulta a tabela de kanas, mas não consegue escrevê-los? Veja 5 formas de praticar e uma rotina diária de 10 minutos com papel e caneta.",
+    "hero_alt": "Ilustração de um robô quadrado amarelo de óculos redondos segurando uma caneta sobre uma folha quadriculada em branco"
+   }
+  }
+ }
+]
