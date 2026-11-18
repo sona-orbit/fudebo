@@ -40,5 +40,47 @@
     "hero_alt": "Ilustração de um robô amarelo e quadrado, de óculos redondos, segurando uma caneta sobre papel quadriculado em branco"
    }
   }
+ },
+ {
+  "slug": "hiragana-origins-from-kanji",
+  "date": "2026-11-18",
+  "run": "/Users/johnkeng/Works/自製 Apple APP/官網SEO/部落格/fudebo/runs/2026-11-18-hiragana-origins-from-kanji",
+  "langs": {
+   "zh-Hant": {
+    "title": "平假名字源表：46 個平假名各從哪個漢字來",
+    "desc": "46 個平假名都是從漢字草書簡化來的：あ 來自安、か 來自加、ぬ 來自奴。整理完整字源表，以及怎麼用字源分清楚 ぬめ、るろ、はほ 這些長得像的字。",
+    "hero_alt": "插畫：戴圓眼鏡的黃色方塊機器人拿著毛筆，看著桌上一張寫滿流動墨線的紙"
+   },
+   "zh-Hans": {
+    "title": "平假名字源表：46 个平假名各从哪个汉字来",
+    "desc": "46 个平假名都是从汉字草书简化来的：あ 来自安、か 来自加、ぬ 来自奴。整理完整字源表，以及怎么用字源分清楚 ぬめ、るろ、はほ 这些长得像的字。",
+    "hero_alt": "插画：戴圆眼镜的黄色方块机器人拿着毛笔，看著桌上一张写满流动墨线的纸"
+   },
+   "en": {
+    "title": "Hiragana Origins: The Kanji Behind All 46 Characters",
+    "desc": "All 46 hiragana came from cursive kanji. See the full origins chart and use it to tell look-alike characters such as ぬ and め apart.",
+    "hero_alt": "Illustration of a yellow square robot with round glasses holding a brush and looking at flowing ink strokes on a sheet of paper"
+   },
+   "es": {
+    "title": "Origen de los 46 hiragana: de qué kanji viene cada uno",
+    "desc": "Los 46 hiragana vienen de kanji escritos en cursiva. Consulta la tabla de orígenes y aprende a distinguir caracteres parecidos como ぬ y め.",
+    "hero_alt": "Ilustración de un robot cuadrado amarillo con gafas redondas que sostiene un pincel y observa trazos de tinta sobre una hoja de papel"
+   },
+   "de": {
+    "title": "Woher kommen Hiragana? Die Kanji hinter allen 46 Zeichen",
+    "desc": "Alle 46 Hiragana stammen von kursiv geschriebenen Kanji ab. Die Übersicht zeigt ihre Herkunft und hilft dir, ähnliche Zeichen wie ぬ und め zu unterscheiden.",
+    "hero_alt": "Illustration eines gelben, eckigen Roboters mit runder Brille, der einen Pinsel hält und fließende Tintenstriche auf einem Blatt Papier betrachtet"
+   },
+   "fr": {
+    "title": "Origine des 46 hiragana : de quels kanji viennent-ils ?",
+    "desc": "Les 46 hiragana viennent de kanji écrits en cursive. Consultez le tableau de leurs origines pour distinguer les caractères qui se ressemblent, comme ぬ et め.",
+    "hero_alt": "Illustration d’un robot carré jaune aux lunettes rondes, tenant un pinceau et regardant des traits d’encre fluides sur une feuille"
+   },
+   "pt-BR": {
+    "title": "Origem dos hiraganas: os kanji por trás dos 46 caracteres",
+    "desc": "Os 46 hiraganas vieram de kanji escritos em letra cursiva. Veja a tabela de origens e aprenda a distinguir caracteres parecidos, como ぬ e め.",
+    "hero_alt": "Ilustração de um robô amarelo e quadrado, de óculos redondos, segurando um pincel e olhando para traços fluidos de tinta em uma folha de papel"
+   }
+  }
  }
 ]
