@@ -8,13 +8,13 @@
 <meta name="theme-color" content="#F5F3EC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#12172A" media="(prefers-color-scheme: dark)">
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/fudebo/*"},{"not":{"selector_matches":"[download],[target=_blank],.no-prerender"}}]},"eagerness":"moderate"}]}</script>
-<title>Fudebo: Hiragana Writing – Japanese handwriting practice, 3 minutes a day</title>
-<meta name="description" content="Fudebo is an iPhone app for Japanese handwriting practice. One page a day, about 10 characters and 3 minutes: see the reading, write the hiragana or katakana from memory with your finger, and the app checks stroke count, order, direction and shape. Characters you miss come back the next day.">
+<title>Fudebo: Hiragana Writing – Japanese handwriting practice with lessons and stroke-by-stroke checks</title>
+<meta name="description" content="Fudebo is an iPhone app for Japanese handwriting practice. Each new kana starts with a lesson card, then you trace it, follow a faint guide and write it from memory. The app checks stroke count, order, direction and shape. About 10 minutes a day; mistakes come back the next day, and your handwriting is kept in your own copybook.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Fudebo">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Fudebo: Hiragana Writing – Japanese handwriting practice, 3 minutes a day">
-<meta property="og:description" content="Fudebo is an iPhone app for Japanese handwriting practice. One page a day, about 10 characters and 3 minutes: see the reading, write the hiragana or katakana from memory with your finger, and the app checks stroke count, order, direction and shape. Characters you miss come back the next day.">
+<meta property="og:title" content="Fudebo: Hiragana Writing – Japanese handwriting practice with lessons and stroke-by-stroke checks">
+<meta property="og:description" content="Fudebo is an iPhone app for Japanese handwriting practice. Each new kana starts with a lesson card, then you trace it, follow a faint guide and write it from memory. The app checks stroke count, order, direction and shape. About 10 minutes a day; mistakes come back the next day, and your handwriting is kept in your own copybook.">
 <meta property="og:url" content="https://sona-orbit.github.io/fudebo/">
 <meta property="og:image" content="https://sona-orbit.github.io/fudebo/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -34,9 +34,9 @@
 <link rel="alternate" hreflang="x-default" href="https://sona-orbit.github.io/fudebo/">
 <link rel="icon" type="image/png" sizes="32x32" href="/fudebo/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/fudebo/assets/icon-180.png">
-<link rel="stylesheet" href="/fudebo/assets/style.css?v=292cdc5a">
+<link rel="stylesheet" href="/fudebo/assets/style.css?v=9cce85da">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJGRNJFB15"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-FJGRNJFB15");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.href;if(/apps\.apple\.com\//.test(h)){gtag("event","download_click",{link_url:h,link_text:(a.textContent||a.getAttribute("aria-label")||"").trim().slice(0,60)});}},true);</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo", "alternateName": ["筆寶"], "description": "Fudebo is an iPhone app for Japanese handwriting practice. One page a day, about 10 characters and 3 minutes: see the reading, write the hiragana or katakana from memory with your finger, and the app checks stroke count, order, direction and shape. Characters you miss come back the next day.", "inLanguage": "en", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Fudebo", "alternateName": ["筆寶"], "description": "Fudebo is an iPhone app for Japanese handwriting practice. Each new kana starts with a lesson card, then you trace it, follow a faint guide and write it from memory. The app checks stroke count, order, direction and shape. About 10 minutes a day; mistakes come back the next day, and your handwriting is kept in your own copybook.", "inLanguage": "en", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://sona-orbit.github.io/fudebo/", "image": "https://sona-orbit.github.io/fudebo/assets/icon-512.webp", "author": {"@type": "Person", "name": "Sona Orbit", "url": "https://sona-orbit.github.io/"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,8 +51,8 @@
 <div class="hero-text">
 <p class="eyebrow">iPhone app for kana handwriting</p>
 <h1><span class="ln">See the reading.</span><span class="ln">Write the kana with your finger.</span></h1>
-<p class="lead">Fudebo is only for handwriting. You get the sound and the romaji, you write the character from memory, and the app checks it stroke by stroke. One page a day, about 10 characters.</p>
-<ul class="facts"><li>About 3 minutes a page</li><li>No account</li><li>Works offline</li></ul>
+<p class="lead">Fudebo is only for handwriting. Each new character starts with a short lesson and works up to writing it from memory. After that you get the sound or the romaji, you write from memory, and the app checks it stroke by stroke.</p>
+<ul class="facts"><li>About 10 minutes a day</li><li>No account</li><li>Works offline</li></ul>
 <div class="cta"><p class="soon"><span class="soon-dot" aria-hidden="true"></span>Coming to the App Store</p><a class="more" href="/fudebo/support/">How to use it and FAQ<span aria-hidden="true"> →</span></a></div>
 </div>
 <figure class="demo">
@@ -65,36 +65,56 @@
 <div class="split-text">
 <p class="kicker">When a stroke is wrong</p>
 <h2 id="h-check">The wrong stroke is marked in red</h2>
-<p>After each character, Fudebo looks at four things: the number of strokes, their order, the direction of each stroke, and its shape and position.</p><p>If a stroke is off, that stroke turns red and the correct stroke order plays. You trace the character once, then write it again on your own.</p>
+<p>After each character, Fudebo looks at four things: the number of strokes, their order, the direction of each stroke, and its shape and position.</p><p>If a stroke is off, that stroke turns red and the correct stroke order plays. You trace the character once, then write it again on your own. If you wrote a similar-looking character instead, the app tells you which one.</p><p>Stuck? “Hint one stroke” draws only the next stroke.</p>
 </div>
-<div class="msgs card"><p class="msgs-title">Hints you will see in the app</p><ul><li><span class="mark" aria-hidden="true"></span>Missing a stroke: this character has 3</li><li><span class="mark" aria-hidden="true"></span>Stroke 2 goes the wrong way</li><li><span class="mark" aria-hidden="true"></span>Wrong order: another stroke comes before stroke 3</li><li><span class="mark" aria-hidden="true"></span>The shape or position of stroke 1 is off</li></ul></div>
+<div class="msgs card"><p class="msgs-title">Hints you will see in the app</p><ul><li><span class="mark" aria-hidden="true"></span>Missing stroke: this character has 3 strokes</li><li><span class="mark" aria-hidden="true"></span>Stroke 2 goes the wrong way</li><li><span class="mark" aria-hidden="true"></span>Wrong stroke order: another stroke comes before stroke 3</li><li><span class="mark" aria-hidden="true"></span>You wrote “ち” instead of “さ”</li></ul></div>
 </div></section>
 
-<section class="band band-alt" aria-labelledby="h-steps"><div class="wrap">
-<p class="kicker">New characters</p>
-<h2 id="h-steps">A new character is written three times</h2>
-<ol class="steps"><li class="step"><span class="step-n" aria-hidden="true">1</span><h3>Trace it</h3><p>The full character is in the grid. Trace it in stroke order.</p></li><li class="step"><span class="step-n" aria-hidden="true">2</span><h3>Follow the faint guide</h3><p>The character is now pale. Write over its shadow.</p></li><li class="step"><span class="step-n" aria-hidden="true">3</span><h3>Write it in an empty box</h3><p>Nothing in the grid but the reading. Write it from memory.</p></li></ol>
-</div></section>
-
-<section class="band" aria-labelledby="h-review"><div class="wrap split">
+<section class="band band-alt" aria-labelledby="h-teach"><div class="wrap">
+<div class="split">
 <div class="split-text">
+<p class="kicker">Lessons</p>
+<h2 id="h-teach">New characters are taught before you write them</h2>
+<p>The first time you open the app there are 4 intro lessons: what kana are, how to read the chart (rows are consonants, columns are vowels), the three basics of writing (top to bottom, left to right, and tome, hane and harai stroke endings), and how to practise. You can watch them again any time.</p><p>Each new row starts with a short lesson: hear the whole row, see its pattern and what to watch out for. Dakuon, handakuon and yōon start with the rule and pairs of words that show the difference.</p>
+</div>
+<div class="tcard card"><h3>Every new character has a lesson card</h3><ul><li>Stroke order animation</li><li>Pronunciation tip</li><li>Writing points</li><li>Origin, for example あ comes from 安</li><li>Characters it is easy to confuse with</li><li>Example words</li></ul></div>
+</div>
+<h3 class="steps-title">After the card, you write it three times</h3>
+<ol class="steps"><li class="step"><span class="step-n" aria-hidden="true">1</span><h3>Trace it</h3><p>The full character is in the grid. Trace it in stroke order.</p></li><li class="step"><span class="step-n" aria-hidden="true">2</span><h3>Follow the faint guide</h3><p>The character is now pale. Write over its shadow.</p></li><li class="step"><span class="step-n" aria-hidden="true">3</span><h3>Write it in an empty box</h3><p>Nothing in the grid but the reading. Write it from memory.</p></li></ol>
+<p class="steps-note">When a whole row is learned, its characters are shuffled and written from memory once more.</p>
+</div></section>
+
+<section class="band" aria-labelledby="h-set"><div class="wrap split split-top">
+<div class="split-text">
+<p class="kicker">Practice settings</p>
+<h2 id="h-set">You decide how to practise</h2>
+<p>Change these in Settings; every page after that follows them.</p>
+</div>
+<dl class="info card"><div><dt>Prompts</dt><dd>Write from romaji, write from the sound, see hiragana and write katakana (or the other way around), write words from their meaning. Pick several and they are mixed. The hiragana–katakana swap and words are Pro.</dd></div><div><dt>Hints</dt><dd>A faint guide every time, trace first and then remove it, or write from memory right away.</dd></div><div><dt>Memory writes</dt><dd>1 to 3 per new character.</dd></div><div><dt>Grading</dt><dd>Lenient, standard or strict, and whether a wrong stroke order counts as a mistake.</dd></div><div><dt>Grid</dt><dd>Cross grid, diagonal grid or no grid lines. Stroke numbers can be shown while tracing.</dd></div><div><dt>Daily amount</dt><dd>Today&#x27;s page is counted in writes: 10 minutes, about 40 writes, by default; 5 or 15 minutes are also possible. New characters come a whole row at a time by default, or 3 a day.</dd></div></dl>
+</div></section>
+
+<section class="band band-alt" aria-labelledby="h-review"><div class="wrap">
 <p class="kicker">Review</p>
 <h2 id="h-review">Characters you miss come back the next day</h2>
-<p>A character you got wrong goes into tomorrow&#x27;s page. One you got right comes back after a longer gap each time.</p><p>The kana open one row at a time. When you remember a whole row, the next row opens.</p><p>There is no streak counter. Skip a few days, come back and carry on. Nothing is taken away.</p>
-</div>
-<div class="sheet-card"><h3>A finished page becomes a practice sheet</h3><p>The characters you wrote that day are laid out in your own handwriting, like a sheet of practice paper.</p></div>
+<div class="cols"><p>A character you got wrong goes into tomorrow&#x27;s page. One you got right comes back after a longer gap each time.</p><p>A new row opens when you remember nearly all of the row before (at most one not yet steady). Getting your reviews right can open it the same day.</p><p>There is no streak counter. Skip a few days, come back and carry on. Nothing is taken away.</p></div>
+</div></section>
+
+<section class="band" aria-labelledby="h-copy"><div class="wrap">
+<p class="kicker">Copybook and handwriting</p>
+<h2 id="h-copy">Everything you write is kept in your own copybook</h2>
+<div class="cbs"><article class="cb card"><h3>Write 12 times (copybook)</h3><p>Tap any character in the kana chart and choose “Write 12 times (copybook)”. 4 boxes to trace, 2 with a faint guide and 6 empty, each one checked.</p></article><article class="cb card"><h3>My Copybook</h3><p>Each day&#x27;s practice sheet is filed by date, so you can page back through it.</p></article><article class="cb card"><h3>Character progress</h3><p>Your first, a middle and your latest version of a character side by side. Tap one to replay how you wrote it. Practice sheets and a character&#x27;s progress can be saved as images to share.</p></article></div>
 </div></section>
 
 <section class="band band-alt" aria-labelledby="h-info"><div class="wrap two">
-<div><h2 id="h-info">Details</h2><dl class="info card"><div><dt>Content</dt><dd>The 46 basic hiragana. Pro adds katakana, dakuon, handakuon, yōon and 66 basic words.</dd></div><div><dt>Each day</dt><dd>One page of about 10 characters. You choose 2, 3 or 5 new characters a day; the rest are reviews.</dd></div><div><dt>How you write</dt><dd>With your finger on the screen.</dd></div><div><dt>Readings</dt><dd>The iPhone&#x27;s built-in Japanese voice.</dd></div><div><dt>Account</dt><dd>Not needed.</dd></div><div><dt>Devices</dt><dd>iPhone with iOS 17 or later. It also runs on iPad.</dd></div></dl></div>
-<div><h2 id="h-not">What it does not do</h2><ul class="limits"><li>It only practises writing kana. No grammar, kanji or conversation.</li><li>It checks stroke count, order, direction and shape. It does not grade how nice your handwriting looks.</li><li>The readings are the iPhone&#x27;s synthesised voice, not recordings of a person.</li></ul></div>
+<div><h2 id="h-info">Details</h2><dl class="info card"><div><dt>Content</dt><dd>The 46 basic hiragana. Pro adds katakana, dakuon, handakuon, yōon and 66 basic words.</dd></div><div><dt>Each day</dt><dd>One page of about 10 minutes (about 40 writes) by default; 5, 10 or 15 minutes.</dd></div><div><dt>How you write</dt><dd>With your finger on the screen.</dd></div><div><dt>Readings</dt><dd>Recorded Japanese voice, included in the app. The few words without a recording use the iPhone&#x27;s built-in Japanese voice.</dd></div><div><dt>Account</dt><dd>Not needed. With iCloud on, your handwriting and progress sync to your own iCloud, so you can continue on a new phone.</dd></div><div><dt>Devices</dt><dd>iPhone with iOS 17 or later. It also runs on iPad.</dd></div></dl></div>
+<div><h2 id="h-not">What it does not do</h2><ul class="limits"><li>It only practises writing kana. No grammar, kanji or conversation.</li><li>It checks stroke count, order, direction and shape. It does not grade how nice your handwriting looks.</li><li>The 66 basic words are there to practise the kana you have learned. It is not a vocabulary course.</li></ul></div>
 </div></section>
 
 <section class="band" id="plans" aria-labelledby="h-plans"><div class="wrap">
 <h2 id="h-plans">Free and Pro</h2>
 <div class="plans">
-<article class="plan card" aria-labelledby="h-free"><h3 id="h-free">Free</h3><ul><li>The 46 basic hiragana</li><li>One page a day</li><li>Ads: a banner at the bottom of the home screen, and at most once a day after a finished page</li></ul></article>
-<article class="plan plan-pro" aria-labelledby="h-pro"><h3 id="h-pro">Pro</h3><ul><li>Katakana</li><li>Dakuon, handakuon and yōon</li><li>66 basic words, written with the kana you have learned</li><li>Any number of pages a day</li><li>Practise a row you pick</li><li>No ads</li></ul><p class="plan-note">Monthly, yearly or a one-time purchase, chosen in the app.</p></article>
+<article class="plan card" aria-labelledby="h-free"><h3 id="h-free">Free</h3><ul><li>Lessons and practice for the 46 basic hiragana</li><li>One page a day</li><li>Copybook for the hiragana you have learned</li><li>My Copybook and progress for each character</li><li>Ads: a banner at the bottom of the home screen, and at most once a day after a finished page</li></ul></article>
+<article class="plan plan-pro" aria-labelledby="h-pro"><h3 id="h-pro">Pro</h3><ul><li>Katakana</li><li>Dakuon, handakuon and yōon</li><li>66 basic words</li><li>Hiragana-to-katakana prompts (and the other way around)</li><li>Any number of pages a day</li><li>Practise a row you pick</li><li>Copybook for every character</li><li>No ads</li></ul><p class="plan-note">Monthly, yearly or a one-time purchase, chosen in the app.</p></article>
 </div>
 </div></section>
 
