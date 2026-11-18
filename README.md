@@ -1,4 +1,4 @@
-# Fudebo (筆寶)
+# Fudebo
 
 Website for **Fudebo**, an iPhone app for practising Japanese kana handwriting. You see the reading,
 write the character from memory with your finger, and the app checks stroke count, order, direction and shape.
