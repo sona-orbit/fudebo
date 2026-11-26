@@ -1,5 +1,47 @@
 [
  {
+  "slug": "hiragana-stroke-order",
+  "date": "2026-11-23",
+  "run": "/Users/johnkeng/Works/自製 Apple APP/官網SEO/部落格/fudebo/runs/2026-11-23-hiragana-stroke-order",
+  "langs": {
+   "zh-Hant": {
+    "title": "平假名筆順怎麼寫？46 字筆畫數表與 12 個最常寫錯的字",
+    "desc": "平假名筆順整理，46 個字各寫幾筆的總表，3 個基本規則，以及 も、せ、お、か、ふ 等 12 個最容易寫錯順序的字，每個字附一筆一筆的筆順圖。",
+    "hero_alt": "插畫：戴圓眼鏡的黃色方塊機器人拿著筆，看著空白方格紙上一筆一筆排好的筆畫"
+   },
+   "zh-Hans": {
+    "title": "平假名笔顺怎么写？46 字笔画数表与 12 个最常写错的字",
+    "desc": "平假名笔顺整理，46 个字各写几笔的总表，3 个基本规则，以及 も、せ、お、か、ふ 等 12 个最容易写错顺序的字，每个字附一笔一笔的笔顺图。",
+    "hero_alt": "插画：戴圆眼镜的黄色方块机器人拿著笔，看著空白方格纸上一笔一笔排好的笔画"
+   },
+   "en": {
+    "title": "Hiragana Stroke Order: All 46 Kana and 12 Tricky Ones",
+    "desc": "A stroke count chart for all 46 hiragana, 3 basic rules, and step-by-step stroke order diagrams for 12 kana that are easy to get wrong.",
+    "hero_alt": "Illustration of a yellow square robot with round glasses holding a pen and looking at strokes arranged in order on blank grid paper"
+   },
+   "es": {
+    "title": "Orden de trazos del hiragana: los 46 kana y 12 casos difíciles",
+    "desc": "Tabla de trazos de los 46 hiragana, 3 reglas básicas y diagramas paso a paso de 12 kana cuyo orden de trazos es fácil confundir.",
+    "hero_alt": "Ilustración de un robot amarillo y cuadrado, con gafas redondas, que sostiene un bolígrafo y mira unos trazos ordenados sobre papel cuadriculado en blanco"
+   },
+   "de": {
+    "title": "Hiragana-Strichfolge: alle 46 Zeichen und 12 Stolperfallen",
+    "desc": "Strichzahlen für alle 46 Hiragana, 3 Grundregeln und Strichfolge-Diagramme für 12 Zeichen, bei denen man leicht Fehler macht.",
+    "hero_alt": "Illustration eines gelben, quadratischen Roboters mit runder Brille, der einen Stift hält und Striche in der richtigen Reihenfolge auf kariertem Papier betrachtet"
+   },
+   "fr": {
+    "title": "Ordre des traits des hiragana : les 46 kana et 12 cas délicats",
+    "desc": "Le nombre de traits des 46 hiragana, 3 règles de base et des schémas pas à pas pour 12 kana dont l’ordre des traits prête à confusion.",
+    "hero_alt": "Illustration d’un robot carré jaune à lunettes rondes, tenant un stylo et regardant des traits numérotés sur une feuille quadrillée vierge"
+   },
+   "pt-BR": {
+    "title": "Ordem dos traços do hiragana: os 46 caracteres e 12 difíceis",
+    "desc": "Tabela com o número de traços dos 46 hiragana, 3 regras básicas e diagramas da ordem dos traços de 12 caracteres fáceis de confundir.",
+    "hero_alt": "Ilustração de um robô quadrado amarelo, de óculos redondos, segurando uma caneta e observando traços em ordem numa folha quadriculada em branco"
+   }
+  }
+ },
+ {
   "slug": "memorize-kana-by-writing-from-memory",
   "date": "2026-11-18",
   "run": "/Users/johnkeng/Works/自製 Apple APP/官網SEO/部落格/fudebo/runs/2026-11-18-memorize-kana-by-writing-from-memory",
