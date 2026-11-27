@@ -1,5 +1,47 @@
 [
  {
+  "slug": "how-many-hiragana",
+  "date": "2026-11-27",
+  "run": "/Users/johnkeng/Works/自製 Apple APP/官網SEO/部落格/fudebo/runs/2026-11-27-how-many-hiragana",
+  "langs": {
+   "zh-Hant": {
+    "title": "平假名有幾個？46 個清音、25 個濁音半濁音、33 個拗音一次看懂",
+    "desc": "平假名基本字是 46 個，加上濁音和半濁音是 71 個，再加拗音是 104 個。為什麼五十音只有 46 個、ゐ ゑ 去哪了、初學該先學哪些，照日本文化廳的現代仮名遣い整理。",
+    "hero_alt": "插畫：戴圓眼鏡的黃色方塊機器人在桌上把一疊方形卡片分成三堆"
+   },
+   "zh-Hans": {
+    "title": "平假名有几个？46 个清音、25 个浊音半浊音、33 个拗音一次看懂",
+    "desc": "平假名基本字是 46 个，加上浊音和半浊音是 71 个，再加拗音是 104 个。为什么五十音只有 46 个、ゐ ゑ 去哪了、初学该先学哪些，照日本文化厅的现代仮名遣い整理。",
+    "hero_alt": "插画：戴圆眼镜的黄色方块机器人在桌上把一叠方形卡片分成三堆"
+   },
+   "en": {
+    "title": "How Many Hiragana Are There? 46 Basic Kana and 104 Total",
+    "desc": "There are 46 basic hiragana, 71 with voiced kana, and 104 with contracted sounds. Learn why the kana chart has fewer than 50 and what to study first.",
+    "hero_alt": "Illustration of a yellow square robot with round glasses sorting square cards into three piles on a desk"
+   },
+   "es": {
+    "title": "¿Cuántos hiragana hay? 46 básicos y 104 en total",
+    "desc": "Hay 46 hiragana básicos, 71 con kana sonoros y 104 con sonidos contraídos. Descubre por qué la tabla no llega a 50 y qué aprender primero.",
+    "hero_alt": "Ilustración de un robot cuadrado amarillo con gafas redondas que ordena tarjetas cuadradas en tres montones sobre un escritorio"
+   },
+   "de": {
+    "title": "Wie viele Hiragana gibt es? 46 Grundzeichen, 104 insgesamt",
+    "desc": "Es gibt 46 grundlegende Hiragana, 71 mit stimmhaften Kana und 104 mit kombinierten Lauten. Erfahre, warum die Kana-Tafel keine 50 Grundzeichen hat.",
+    "hero_alt": "Illustration eines gelben, quadratischen Roboters mit runder Brille, der Karten auf einem Schreibtisch in drei Stapel sortiert"
+   },
+   "fr": {
+    "title": "Combien y a-t-il d’hiragana ? 46 de base, 104 au total",
+    "desc": "Il y a 46 hiragana de base, 71 avec les kana sonores et 104 avec les sons contractés. Voici pourquoi le tableau en compte moins de 50.",
+    "hero_alt": "Illustration d’un robot carré jaune à lunettes rondes qui trie des cartes carrées en trois piles sur un bureau"
+   },
+   "pt-BR": {
+    "title": "Quantos hiraganas existem? 46 básicos e 104 no total",
+    "desc": "São 46 hiraganas básicos, 71 com os sonoros e 104 com os sons contraídos. Entenda por que a tabela tem menos de 50 e o que estudar primeiro.",
+    "hero_alt": "Ilustração de um robô amarelo quadrado, de óculos redondos, separando cartões quadrados em três pilhas sobre uma mesa"
+   }
+  }
+ },
+ {
   "slug": "hiragana-stroke-order",
   "date": "2026-11-23",
   "run": "/Users/johnkeng/Works/自製 Apple APP/官網SEO/部落格/fudebo/runs/2026-11-23-hiragana-stroke-order",
